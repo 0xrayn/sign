@@ -26,7 +26,7 @@ public class Controller : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-
+        rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
         // Engine sound
         engineSource = gameObject.AddComponent<AudioSource>();
         engineSource.clip = engineClip;
