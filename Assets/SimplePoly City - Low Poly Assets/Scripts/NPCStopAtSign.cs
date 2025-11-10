@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class CarStopAtSign : MonoBehaviour
+public class NPCStopAtSign : MonoBehaviour
 {
     public float speed = 10f;
     private bool isStopped = false;

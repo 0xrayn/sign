@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7926442589802424500}
   - component: {fileID: -6110067249892015902}
   - component: {fileID: 7053430345419957087}
+  - component: {fileID: 7355285256628870500}
   m_Layer: 0
   m_Name: Vehicle_Taxi
   m_TagString: NPC
@@ -158,3 +159,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.958062, y: 2.433641, z: 6.3205423}
   m_Center: {x: -0.006408453, y: 1.2162137, z: -0.19318247}
+--- !u!114 &7355285256628870500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 529cd379f62634e4eb88bea3a4109461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCStopAtSign
+  speed: 5

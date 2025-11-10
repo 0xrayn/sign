@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3974188523297607551}
   - component: {fileID: -681483944621578613}
   - component: {fileID: 5873366822406615506}
+  - component: {fileID: -4801711656976151116}
   m_Layer: 0
   m_Name: Vehicle_SUV_color01
   m_TagString: NPC
@@ -158,3 +159,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.1007779, y: 2.2749152, z: 5.732233}
   m_Center: {x: -0.09074509, y: 1.1287856, z: 0.09187877}
+--- !u!114 &-4801711656976151116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 529cd379f62634e4eb88bea3a4109461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCStopAtSign
+  speed: 5
