@@ -20520,9 +20520,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5464b5f7dfc001d419eb982bcc1ddd5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Controller
-  speed: 5
+  speed: 13
   sprintMultiplier: 1.5
   rotationSpeed: 120
+  acceleration: 4
+  deceleration: 6
   engineClip: {fileID: 8300000, guid: 0b699a09fd77e5949bdf13bf614e40b5, type: 3}
   brakeClip: {fileID: 8300000, guid: a3afbfc85321bd048a6c97dac10af2c4, type: 3}
   crashClip: {fileID: 8300000, guid: 9155d6fc65374d5448461f37a2e32172, type: 3}
@@ -29145,13 +29147,13 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.792
+  m_Volume: 0.223
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 163
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500

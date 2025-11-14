@@ -8,9 +8,16 @@ public class Controller : MonoBehaviour
     public static Controller Instance;
 
     [Header("Movement")]
-    public float speed = 5f;             // m/s normal
-    public float sprintMultiplier = 1.5f; // multiplier shift
-    public float rotationSpeed = 120f;   // deg/s
+    public float speed = 14f;             
+    public float sprintMultiplier = 1.5f;
+    public float rotationSpeed = 120f;
+
+    [Header("Acceleration Settings")]
+    public float acceleration = 4f;      
+    public float deceleration = 6f;      
+
+    [Header("Brake Settings")]
+    public float brakeDeceleration = 12f;   // semakin besar, semakin pakem rem
 
     [Header("Audio Clips")]
     public AudioClip engineClip;
@@ -25,7 +32,8 @@ public class Controller : MonoBehaviour
     private AudioSource engineSource;
     private AudioSource sfxSource;
 
-    private float currentSpeed = 0f;
+    private float currentSpeed = 0f;     
+    private float targetSpeed = 0f;      
 
     void Awake() => Instance = this;
 
@@ -62,28 +70,59 @@ public class Controller : MonoBehaviour
         if (Keyboard.current.aKey.isPressed || Keyboard.current.leftArrowKey.isPressed) turn = -1f;
         else if (Keyboard.current.dKey.isPressed || Keyboard.current.rightArrowKey.isPressed) turn = 1f;
 
-        // Turbo / Shift
+        // Sprint
         float finalSpeed = speed;
         if (Keyboard.current.leftShiftKey.isPressed || Keyboard.current.rightShiftKey.isPressed)
             finalSpeed *= sprintMultiplier;
 
-        // Brake / Space
+        // Brake
         bool isBraking = Keyboard.current.spaceKey.isPressed;
+
         if (isBraking)
         {
-            rb.linearVelocity *= 0.9f; // pelambatan
-            currentSpeed = 0f;
+            // Smooth brake
+            currentSpeed = Mathf.MoveTowards(
+                currentSpeed,
+                0f,
+                brakeDeceleration * Time.fixedDeltaTime
+            );
 
+            // Play brake SFX
             if (!sfxSource.isPlaying && brakeClip != null)
             {
                 sfxSource.clip = brakeClip;
                 sfxSource.Play();
             }
+
+            // Gerakan saat brake
+            Vector3 movement = transform.forward * currentSpeed * Time.fixedDeltaTime;
+            rb.MovePosition(rb.position + movement);
         }
         else
         {
-            // Gerak
-            currentSpeed = moveVertical * finalSpeed;
+            // Tentukan kecepatan target dari input gas
+            targetSpeed = moveVertical * finalSpeed;
+
+            if (moveVertical != 0)
+            {
+                // akselerasi smooth
+                currentSpeed = Mathf.MoveTowards(
+                    currentSpeed,
+                    targetSpeed,
+                    acceleration * Time.fixedDeltaTime
+                );
+            }
+            else
+            {
+                // decelerasi natural
+                currentSpeed = Mathf.MoveTowards(
+                    currentSpeed,
+                    0f,
+                    deceleration * Time.fixedDeltaTime
+                );
+            }
+
+            // Gerakkan karakter
             Vector3 movement = transform.forward * currentSpeed * Time.fixedDeltaTime;
             rb.MovePosition(rb.position + movement);
         }
@@ -92,7 +131,7 @@ public class Controller : MonoBehaviour
         float rotation = turn * rotationSpeed * Time.fixedDeltaTime;
         rb.MoveRotation(rb.rotation * Quaternion.Euler(0f, rotation, 0f));
 
-        // Pitch engine
+        // Pitch engine sound
         float speedPercent = Mathf.Abs(currentSpeed) / finalSpeed;
         engineSource.pitch = Mathf.Lerp(minEnginePitch, maxEnginePitch, speedPercent);
     }
@@ -108,6 +147,6 @@ public class Controller : MonoBehaviour
 
     public float GetCurrentSpeed()
     {
-        return Mathf.Abs(currentSpeed); // m/s
+        return Mathf.Abs(currentSpeed);
     }
 }
