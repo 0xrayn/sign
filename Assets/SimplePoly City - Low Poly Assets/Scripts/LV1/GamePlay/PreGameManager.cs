@@ -1,20 +1,77 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PreGameManager : MonoBehaviour
 {
     [Header("Scene Settings")]
-    public string gameplaySceneName = "Level1";   // nama scene gameplay kamu
+    public string gameplaySceneName = "Level1";
+    public string menuSceneName = "MainMenu"; 
 
-    // Dipanggil oleh tombol Start Game
+    [Header("Audio Settings")]
+    public AudioSource musicSource;
+    public AudioClip soundtrack;
+    public float musicFadeDuration = 1.5f;
+
+    [Header("Button SFX")]
+    public AudioSource sfxSource;
+    public AudioClip buttonClickSound;
+
+    private void Start()
+    {
+        if (soundtrack != null)
+        {
+            musicSource.clip = soundtrack;
+            musicSource.volume = 0f;
+            musicSource.Play();
+            StartCoroutine(FadeAudio(musicSource, 1f, musicFadeDuration));
+        }
+    }
+
     public void StartGame()
     {
+        PlayButtonSFX();
+        StartCoroutine(StartGameSequence());
+    }
+
+    public void BackToMenu()
+    {
+        PlayButtonSFX();
+        StartCoroutine(BackToMenuSequence());
+    }
+
+    private System.Collections.IEnumerator FadeAudio(AudioSource source, float targetVolume, float duration)
+    {
+        float startVolume = source.volume;
+        float time = 0f;
+
+        while (time < duration)
+        {
+            time += Time.deltaTime;
+            source.volume = Mathf.Lerp(startVolume, targetVolume, time / duration);
+            yield return null;
+        }
+
+        source.volume = targetVolume;
+    }
+
+    private System.Collections.IEnumerator StartGameSequence()
+    {
+        yield return StartCoroutine(FadeAudio(musicSource, 0f, musicFadeDuration));
         SceneManager.LoadScene(gameplaySceneName);
     }
 
-    // Dipanggil oleh tombol Quit jika ingin
-    public void QuitGame()
+    private System.Collections.IEnumerator BackToMenuSequence()
     {
-        Application.Quit();
+        yield return StartCoroutine(FadeAudio(musicSource, 0f, musicFadeDuration));
+        SceneManager.LoadScene(menuSceneName);
+    }
+
+    private void PlayButtonSFX()
+    {
+        if (sfxSource != null && buttonClickSound != null)
+        {
+            sfxSource.PlayOneShot(buttonClickSound);
+        }
     }
 }

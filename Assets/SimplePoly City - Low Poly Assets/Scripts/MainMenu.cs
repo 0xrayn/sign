@@ -4,22 +4,44 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     [Header("Panels")]
-    public GameObject mainPanel;           // Panel berisi tombol Start, About, Exit
-    public GameObject levelSelectPanel;    // Panel berisi tombol Level 1–4
-    public GameObject aboutPanel;          // Panel berisi info tentang game / developer
+    public GameObject mainPanel;
+    public GameObject levelSelectPanel;
+    public GameObject aboutPanel;
 
     [Header("Backgrounds")]
-    public GameObject mainBackground;      // Gambar background menu utama
-    public GameObject levelBackground;     // Gambar background level select
-    public GameObject aboutBackground;     // Gambar background about (opsional)
+    public GameObject mainBackground;
+    public GameObject levelBackground;
+    public GameObject aboutBackground;
+
+    [Header("Audio")]
+    public AudioSource audioSource;     // AudioSource untuk SFX klik
+    public AudioSource musicSource;     // AudioSource untuk BGM
+    public AudioClip clickSound;        // Suara klik button
+    public AudioClip bgMusic;           // Musik background
 
     void Start()
     {
+        // Play background music (loop)
+        if (musicSource != null && bgMusic != null)
+        {
+            musicSource.clip = bgMusic;
+            musicSource.loop = true;
+            musicSource.Play();
+        }
+
         ShowMainMenu();
+    }
+
+    public void PlayClickSound()
+    {
+        if (audioSource != null && clickSound != null)
+            audioSource.PlayOneShot(clickSound);
     }
 
     public void ShowMainMenu()
     {
+        PlayClickSound();
+
         mainPanel.SetActive(true);
         levelSelectPanel.SetActive(false);
         if (aboutPanel != null) aboutPanel.SetActive(false);
@@ -31,6 +53,8 @@ public class MainMenu : MonoBehaviour
 
     public void ShowLevelSelect()
     {
+        PlayClickSound();
+
         mainPanel.SetActive(false);
         levelSelectPanel.SetActive(true);
         if (aboutPanel != null) aboutPanel.SetActive(false);
@@ -42,6 +66,8 @@ public class MainMenu : MonoBehaviour
 
     public void ShowAboutMenu()
     {
+        PlayClickSound();
+
         mainPanel.SetActive(false);
         levelSelectPanel.SetActive(false);
         if (aboutPanel != null) aboutPanel.SetActive(true);
@@ -53,11 +79,14 @@ public class MainMenu : MonoBehaviour
 
     public void LoadLevel(string sceneName)
     {
+        PlayClickSound();
         SceneManager.LoadScene(sceneName);
     }
 
     public void ExitGame()
     {
+        PlayClickSound();
+
         #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
         #else

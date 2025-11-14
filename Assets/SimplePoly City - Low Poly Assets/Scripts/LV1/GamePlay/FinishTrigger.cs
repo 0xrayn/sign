@@ -3,7 +3,13 @@ using UnityEngine.SceneManagement;
 
 public class FinishTrigger : MonoBehaviour
 {
+    [Header("Scene")]
     public string finishSceneName = "FinishScene";
+
+    [Header("Audio")]
+    public AudioSource sfxSource;       // 1 AudioSource untuk SFX
+    public AudioClip successSound;      // suara ketika semua paket lengkap
+    public AudioClip failSound;         // suara ketika paket belum lengkap
 
     private void OnTriggerEnter(Collider other)
     {
@@ -11,12 +17,21 @@ public class FinishTrigger : MonoBehaviour
 
         if (HUDManager.Instance.allPackagesCollected)
         {
+            // ▶ Play success sound
+            if (successSound != null) 
+                sfxSource.PlayOneShot(successSound);
+
             HUDManager.Instance.FinishGame();
-            // Delay untuk popup selesai
+
+            // Delay pop up dan masuk scene akhir
             Invoke(nameof(GoToFinishScene), 2f);
         }
         else
         {
+            // ▶ Play fail sound
+            if (failSound != null)
+                sfxSource.PlayOneShot(failSound);
+
             PopupManager.Instance.ShowPopup("Ambil semua paket dulu!");
         }
     }

@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System.Collections;
 
 public class HUDManager : MonoBehaviour
 {
@@ -12,45 +13,47 @@ public class HUDManager : MonoBehaviour
     public TMP_Text speedText;
 
     [Header("Stars UI")]
-    public Image[] stars; // 3 Image bintang
+    public Image[] stars;
 
     [Header("Game Settings")]
     public int totalPackages = 5;
 
-    [HideInInspector]
-    public float timer = 0f;
-    [HideInInspector]
-    public int collectedPackages = 0;
-    [HideInInspector]
-    public bool allPackagesCollected = false;
+    [HideInInspector] public float timer = 0f;
+    [HideInInspector] public int collectedPackages = 0;
+    [HideInInspector] public bool allPackagesCollected = false;
 
     private bool finished = false;
     private Controller playerController;
+
+    [Header("Sound Settings")]
+    public AudioSource bgmSource;
+    public AudioClip backgroundMusic;
+
+    [Range(0f, 3f)] public float fadeDuration = 1.5f;
 
     void Awake() => Instance = this;
 
     void Start()
     {
         playerController = Controller.Instance;
-        if (playerController == null)
-            Debug.LogWarning("HUDManager: Controller.Instance belum ditemukan!");
+
+        // Play BGM fade-in
+        if (bgmSource != null && backgroundMusic != null)
+        {
+            bgmSource.clip = backgroundMusic;
+            bgmSource.loop = true;
+            StartCoroutine(FadeInMusic());
+        }
     }
 
     void Update()
     {
         if (finished) return;
 
-        // Update timer
         timer += Time.deltaTime;
         UpdateTimeUI();
-
-        // Update paket
         UpdatePackageUI();
-
-        // Update speed
         UpdateSpeedUI();
-
-        // Update bintang
         UpdateStars();
     }
 
@@ -81,22 +84,21 @@ public class HUDManager : MonoBehaviour
     {
         int starCount = 3;
 
-        if (timer < 180) starCount = 3;       // < 3 menit
-        else if (timer < 300) starCount = 2;  // 3-5 menit
-        else if (timer < 1000) starCount = 1;  // 12 menit
-        else starCount = 0;                   // > 12 menit
+        if (timer < 180) starCount = 3;
+        else if (timer < 300) starCount = 2;
+        else if (timer < 1000) starCount = 1;
+        else starCount = 0;
 
         for (int i = 0; i < stars.Length; i++)
-        {
             if (stars[i] != null)
                 stars[i].enabled = i < starCount;
-        }
     }
 
     public void AddPackage()
     {
         collectedPackages++;
         UpdatePackageUI();
+
         if (PopupManager.Instance != null)
             PopupManager.Instance.ShowPopup("Paket terambil!");
 
@@ -115,19 +117,64 @@ public class HUDManager : MonoBehaviour
             PopupManager.Instance.ShowPopup($"{reason} (+{extraTime:F1}s)");
     }
 
-public void FinishGame()
-{
-    finished = true;
+    // ================================
+    //            FINISH GAME
+    // ================================
+    public void FinishGame()
+    {
+        if (finished) return;
 
-    int starCount = 0;
-    for (int i = 0; i < stars.Length; i++)
-        if (stars[i].enabled) starCount++;
+        finished = true;
 
-    PlayerPrefs.SetFloat("FINAL_TIME", timer);
-    PlayerPrefs.SetInt("FINAL_STARS", starCount);
-    PlayerPrefs.Save();
+        StartCoroutine(FadeOutMusic());
 
-    UnityEngine.SceneManagement.SceneManager.LoadScene("FinishScene");
-}
+        int starCount = 0;
+        for (int i = 0; i < stars.Length; i++)
+            if (stars[i].enabled) starCount++;
 
+        PlayerPrefs.SetFloat("FINAL_TIME", timer);
+        PlayerPrefs.SetInt("FINAL_STARS", starCount);
+        PlayerPrefs.Save();
+
+        StartCoroutine(LoadFinishSceneAfter(1.5f));
+    }
+
+    IEnumerator LoadFinishSceneAfter(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        UnityEngine.SceneManagement.SceneManager.LoadScene("FinishScene");
+    }
+
+    // ================================
+    //            FADE ANIMATION
+    // ================================
+    IEnumerator FadeInMusic()
+    {
+        bgmSource.volume = 0f;
+        bgmSource.Play();
+
+        float t = 0f;
+        while (t < fadeDuration)
+        {
+            t += Time.deltaTime;
+            bgmSource.volume = Mathf.Lerp(0f, 1f, t / fadeDuration);
+            yield return null;
+        }
+    }
+
+    IEnumerator FadeOutMusic()
+    {
+        float startVol = bgmSource.volume;
+
+        float t = 0f;
+        while (t < fadeDuration)
+        {
+            t += Time.deltaTime;
+            bgmSource.volume = Mathf.Lerp(startVol, 0f, t / fadeDuration);
+            yield return null;
+        }
+
+        bgmSource.Stop();
+        bgmSource.volume = startVol;
+    }
 }

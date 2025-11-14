@@ -24,51 +24,54 @@ public class FinishSceneManager : MonoBehaviour
     [Header("Scenes")]
     public string menuSceneName = "MainMenu";
 
+    [Header("Audio")]
+    public AudioSource sfxSource;    // 1 AudioSource
+    public AudioClip panelSound;     // ▶ Bunyi saat STORY tampil
+    public AudioClip buttonSound;    // ▶ Bunyi saat klik button
+
     void Start()
     {
-        // Persiapkan panel
         storyPanel.alpha = 1;
         resultPanel.alpha = 0;
         fadeOverlay.color = new Color(0, 0, 0, 0);
 
-        // Ambil data dari HUDManager
         float finalTime = PlayerPrefs.GetFloat("FINAL_TIME", 0);
         int finalStars = PlayerPrefs.GetInt("FINAL_STARS", 0);
 
-        // Format waktu
         int m = Mathf.FloorToInt(finalTime / 60);
         int s = Mathf.FloorToInt(finalTime % 60);
         timeText.text = $"Waktu: {m:00}:{s:00}";
 
-        // Bintang
         for (int i = 0; i < stars.Length; i++)
             stars[i].sprite = (i < finalStars) ? starOn : starOff;
 
-        // Mulai sequence
         StartCoroutine(FinishSequence());
     }
 
     IEnumerator FinishSequence()
     {
-        // 1. Tampilkan cerita
-       storyText.text =
-    "Anda telah berhasil mengantarkan seluruh paket dengan aman dan tepat waktu.\n" +
-    "Semua kiriman milik Sahroni telah sampai berkat kerja keras dan ketelitian Anda.\n\n" +
-    "Terima kasih atas dedikasi Anda — kota dan Sahroni sangat menghargainya.";
+        // --- STORY tampil ---
+        storyText.text =
+        "Anda telah berhasil mengantarkan seluruh paket dengan aman dan tepat waktu.\n" +
+        "Semua kiriman milik Sahroni telah sampai berkat kerja keras dan ketelitian Anda.\n\n" +
+        "Terima kasih atas dedikasi Anda — kota dan Sahroni sangat menghargainya.";
 
+        // ▶ Play 1x saat story muncul
+        if (panelSound != null) 
+            sfxSource.PlayOneShot(panelSound);
 
         yield return new WaitForSeconds(3f);
 
-        // 2. Fade to black
+        // Fade to black
         yield return StartCoroutine(FadeImage(fadeOverlay, 0, 1, 1f));
 
-        // 3. Sembunyikan panel cerita
+        // Hilangkan story
         storyPanel.alpha = 0;
 
-        // 4. Tampilkan panel hasil
-        yield return StartCoroutine(FadeCanvas(resultPanel, 0, 1, 1.5f));
+        // Fade in result panel (TANPA SUARA)
+        yield return StartCoroutine(FadeCanvas(resultPanel, 0, 1, 1.2f));
 
-        // 5. Fade dari black ke normal
+        // Fade out black
         yield return StartCoroutine(FadeImage(fadeOverlay, 1, 0, 1f));
     }
 
@@ -99,6 +102,10 @@ public class FinishSceneManager : MonoBehaviour
 
     public void BackToMenu()
     {
+        // ▶ Sound button
+        if (buttonSound != null)
+            sfxSource.PlayOneShot(buttonSound);
+
         SceneManager.LoadScene(menuSceneName);
     }
 }
