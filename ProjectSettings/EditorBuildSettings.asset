@@ -9,11 +9,17 @@ EditorBuildSettings:
     path: Assets/SimplePoly City - Low Poly Assets/Demo/MainMenu.unity
     guid: d26d11675e8ccba4abf57ee20bedba27
   - enabled: 1
+    path: Assets/SimplePoly City - Low Poly Assets/Demo/PreGameScene.unity
+    guid: 4c6fa363bf91f1a4d8279b2143d9bcb3
+  - enabled: 1
     path: Assets/SimplePoly City - Low Poly Assets/Demo/Level 1.unity
     guid: 8ab6efd70f05c3544b41f2c884f0d1be
   - enabled: 1
+    path: Assets/SimplePoly City - Low Poly Assets/Demo/FinishScene.unity
+    guid: acc57f6b26fbf9347bbc374b1f278ad4
+  - enabled: 1
     path: Assets/SimplePoly City - Low Poly Assets/Demo/Level 2.unity
-    guid: 8f58ebf096645fa4f96ebf548d76729c
+    guid: 5aaf45a9bcc68f643a01be8be37cdb65
   - enabled: 1
     path: Assets/SimplePoly City - Low Poly Assets/Demo/Level 3.unity
     guid: 16d89ce5ef40aa742a8b77b2bb61d641

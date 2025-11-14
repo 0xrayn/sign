@@ -115,17 +115,19 @@ public class HUDManager : MonoBehaviour
             PopupManager.Instance.ShowPopup($"{reason} (+{extraTime:F1}s)");
     }
 
-    public void FinishGame()
-    {
-        finished = true;
+public void FinishGame()
+{
+    finished = true;
 
-        int starCount = 0;
-        for (int i = 0; i < stars.Length; i++)
-            if (stars[i] != null && stars[i].enabled)
-                starCount++;
+    int starCount = 0;
+    for (int i = 0; i < stars.Length; i++)
+        if (stars[i].enabled) starCount++;
 
-        string starStr = new string('★', starCount) + new string('☆', stars.Length - starCount);
-        if (PopupManager.Instance != null)
-            PopupManager.Instance.ShowPopup($"FINISH! ");
-    }
+    PlayerPrefs.SetFloat("FINAL_TIME", timer);
+    PlayerPrefs.SetInt("FINAL_STARS", starCount);
+    PlayerPrefs.Save();
+
+    UnityEngine.SceneManagement.SceneManager.LoadScene("FinishScene");
+}
+
 }
