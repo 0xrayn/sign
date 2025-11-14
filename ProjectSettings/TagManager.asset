@@ -6,6 +6,7 @@ TagManager:
   tags:
   - NPC
   - StopSign
+  - Package
   layers:
   - Default
   - TransparentFX
