@@ -5,9 +5,12 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(AudioSource))]
 public class Controller : MonoBehaviour
 {
+    public static Controller Instance;
+
     [Header("Movement")]
-    public float speed = 5f;
-    public float rotationSpeed = 120f;
+    public float speed = 5f;             // m/s normal
+    public float sprintMultiplier = 1.5f; // multiplier shift
+    public float rotationSpeed = 120f;   // deg/s
 
     [Header("Audio Clips")]
     public AudioClip engineClip;
@@ -17,28 +20,30 @@ public class Controller : MonoBehaviour
     [Header("Settings")]
     public float maxEnginePitch = 2f;
     public float minEnginePitch = 0.8f;
-    public float maxSpeed = 20f;
 
     private Rigidbody rb;
     private AudioSource engineSource;
     private AudioSource sfxSource;
 
+    private float currentSpeed = 0f;
+
+    void Awake() => Instance = this;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
-        // Engine sound
+
+        // Engine
         engineSource = gameObject.AddComponent<AudioSource>();
         engineSource.clip = engineClip;
         engineSource.loop = true;
-        engineSource.playOnAwake = false;
         engineSource.spatialBlend = 1f;
         engineSource.Play();
 
-        // SFX (rem, crash)
+        // SFX
         sfxSource = gameObject.AddComponent<AudioSource>();
         sfxSource.loop = false;
-        sfxSource.playOnAwake = false;
         sfxSource.spatialBlend = 1f;
     }
 
@@ -49,25 +54,27 @@ public class Controller : MonoBehaviour
         float moveVertical = 0f;
         float turn = 0f;
 
-        // Gerak maju/mundur
-        if (Keyboard.current.wKey.isPressed || Keyboard.current.upArrowKey.isPressed)
-            moveVertical = 1f;
-        else if (Keyboard.current.sKey.isPressed || Keyboard.current.downArrowKey.isPressed)
-            moveVertical = -1f;
+        // Input maju/mundur
+        if (Keyboard.current.wKey.isPressed || Keyboard.current.upArrowKey.isPressed) moveVertical = 1f;
+        else if (Keyboard.current.sKey.isPressed || Keyboard.current.downArrowKey.isPressed) moveVertical = -1f;
 
-        // Belok kiri/kanan
-        if (Keyboard.current.aKey.isPressed || Keyboard.current.leftArrowKey.isPressed)
-            turn = -1f;
-        else if (Keyboard.current.dKey.isPressed || Keyboard.current.rightArrowKey.isPressed)
-            turn = 1f;
+        // Input belok
+        if (Keyboard.current.aKey.isPressed || Keyboard.current.leftArrowKey.isPressed) turn = -1f;
+        else if (Keyboard.current.dKey.isPressed || Keyboard.current.rightArrowKey.isPressed) turn = 1f;
 
-        // REM
+        // Turbo / Shift
+        float finalSpeed = speed;
+        if (Keyboard.current.leftShiftKey.isPressed || Keyboard.current.rightShiftKey.isPressed)
+            finalSpeed *= sprintMultiplier;
+
+        // Brake / Space
         bool isBraking = Keyboard.current.spaceKey.isPressed;
         if (isBraking)
         {
             rb.linearVelocity *= 0.9f; // pelambatan
-            // suara rem
-            if (!sfxSource.isPlaying)
+            currentSpeed = 0f;
+
+            if (!sfxSource.isPlaying && brakeClip != null)
             {
                 sfxSource.clip = brakeClip;
                 sfxSource.Play();
@@ -75,30 +82,32 @@ public class Controller : MonoBehaviour
         }
         else
         {
-            // Gerak maju/mundur
-            Vector3 movement = transform.forward * moveVertical * speed * Time.fixedDeltaTime;
+            // Gerak
+            currentSpeed = moveVertical * finalSpeed;
+            Vector3 movement = transform.forward * currentSpeed * Time.fixedDeltaTime;
             rb.MovePosition(rb.position + movement);
         }
 
         // Rotasi
         float rotation = turn * rotationSpeed * Time.fixedDeltaTime;
-        Quaternion turnRotation = Quaternion.Euler(0f, rotation, 0f);
-        rb.MoveRotation(rb.rotation * turnRotation);
+        rb.MoveRotation(rb.rotation * Quaternion.Euler(0f, rotation, 0f));
 
-        // Pitch mesin sesuai kecepatan
-        float speedPercent = rb.linearVelocity.magnitude / maxSpeed;
+        // Pitch engine
+        float speedPercent = Mathf.Abs(currentSpeed) / finalSpeed;
         engineSource.pitch = Mathf.Lerp(minEnginePitch, maxEnginePitch, speedPercent);
     }
 
     void OnCollisionEnter(Collision collision)
     {
-        // suara tabrakan
-        sfxSource.clip = crashClip;
-        sfxSource.Play();
+        if (sfxSource != null && crashClip != null)
+        {
+            sfxSource.clip = crashClip;
+            sfxSource.Play();
+        }
     }
 
-        public float GetCurrentSpeed()
+    public float GetCurrentSpeed()
     {
-        return rb.linearVelocity.magnitude;
+        return Mathf.Abs(currentSpeed); // m/s
     }
 }

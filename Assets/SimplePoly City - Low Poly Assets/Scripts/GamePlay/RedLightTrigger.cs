@@ -12,7 +12,7 @@ public class RedLightTrigger : MonoBehaviour
             TrafficLightTrigger light = GetComponent<TrafficLightTrigger>();
             if (light != null && light.IsRed())
             {
-                HUDManager.Instance.AddPenalty(penaltyTime, "🚦 Red Light!");
+                HUDManager.Instance.AddPenalty(penaltyTime, "Lampu Merah! ");
                 penalized = true;
             }
         }

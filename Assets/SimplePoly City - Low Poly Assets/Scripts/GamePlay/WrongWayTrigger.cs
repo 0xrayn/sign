@@ -8,7 +8,7 @@ public class WrongWayTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            HUDManager.Instance.AddPenalty(penaltyTime, "⚠ Wrong Way!");
+            HUDManager.Instance.AddPenalty(penaltyTime, "Salah Jalur! ");
         }
     }
 }

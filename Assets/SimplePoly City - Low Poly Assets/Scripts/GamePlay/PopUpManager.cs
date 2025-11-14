@@ -23,9 +23,8 @@ public class PopupManager : MonoBehaviour
     {
         popupText.text = msg;
 
-        // Jangan setActive false, cukup alpha
-        popupCanvas.alpha = 0;  
-        popupCanvas.gameObject.SetActive(true); // Pastikan aktif
+        popupCanvas.alpha = 0;
+        popupCanvas.gameObject.SetActive(true); // GameObject tetap aktif
 
         // Fade In
         float t = 0;
@@ -37,7 +36,6 @@ public class PopupManager : MonoBehaviour
         }
         popupCanvas.alpha = 1;
 
-        // Tunggu beberapa detik
         yield return new WaitForSeconds(displayDuration);
 
         // Fade Out
@@ -49,7 +47,6 @@ public class PopupManager : MonoBehaviour
             yield return null;
         }
 
-        // Jangan matikan GameObject, cukup invisible
         popupCanvas.alpha = 0;
     }
 }

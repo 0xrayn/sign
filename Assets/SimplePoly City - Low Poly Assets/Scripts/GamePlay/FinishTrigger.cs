@@ -6,7 +6,14 @@ public class FinishTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            HUDManager.Instance.FinishGame();
+            if (HUDManager.Instance.allPackagesCollected)
+            {
+                HUDManager.Instance.FinishGame();
+            }
+            else
+            {
+                PopupManager.Instance.ShowPopup("❌ You must collect all packages first!");
+            }
         }
     }
 }
