@@ -413,7 +413,7 @@ MonoBehaviour:
   fadeOverlay: {fileID: 2097897474}
   menuSceneName: MainMenu
   sfxSource: {fileID: 648885842}
-  panelSound: {fileID: 8300000, guid: ef30c4c678fafbb4395fce6f4a50370e, type: 3}
+  panelSound: {fileID: 8300000, guid: bb1add90797b64c499b33f18a9cb2c28, type: 3}
   buttonSound: {fileID: 8300000, guid: e8249763726da774fb54542ae9292dee, type: 3}
 --- !u!82 &648885842
 AudioSource:
@@ -428,7 +428,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.317
   m_Pitch: 1
   Loop: 0
   Mute: 0

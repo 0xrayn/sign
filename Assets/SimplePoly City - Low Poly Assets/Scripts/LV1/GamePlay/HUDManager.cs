@@ -157,7 +157,7 @@ public class HUDManager : MonoBehaviour
         while (t < fadeDuration)
         {
             t += Time.deltaTime;
-            bgmSource.volume = Mathf.Lerp(0f, 1f, t / fadeDuration);
+            bgmSource.volume = Mathf.Lerp(0f, 0.08f, t / fadeDuration);
             yield return null;
         }
     }
