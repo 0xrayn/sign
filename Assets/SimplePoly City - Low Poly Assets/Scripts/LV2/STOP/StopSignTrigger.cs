@@ -12,6 +12,10 @@ public class StopSignTrigger : MonoBehaviour
     private bool playerInside = false;
     private bool penaltyGiven = false;
 
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip sidewalkSound;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -33,6 +37,8 @@ public class StopSignTrigger : MonoBehaviour
             if (!penaltyGiven && stopTimer < requiredStopTime)
             {
                 HUDManager.Instance.AddPenalty(penaltyTime, "Tidak berhenti 3 detik di rambu STOP!");
+                if (audioSource != null && sidewalkSound != null)
+                    audioSource.PlayOneShot(sidewalkSound);
             }
         }
     }
