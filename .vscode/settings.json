@@ -66,9 +66,6 @@
     "explorer.fileNesting.patterns": {
         "*.sln": "*.csproj"
     },
-<<<<<<< HEAD
-    "dotnet.defaultSolution": "signv.slnx"
-=======
+    "signv.slnx=======dotnet.defaultSolution": "My project game pro tubes.slnx>>>>>>>d8066377ecaad51608bb1d407743de580cd16eba",
     "dotnet.defaultSolution": "My project game pro tubes.slnx"
->>>>>>> d8066377ecaad51608bb1d407743de580cd16eba
 }

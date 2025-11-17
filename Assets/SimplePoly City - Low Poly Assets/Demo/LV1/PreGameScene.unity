@@ -499,6 +499,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PreGameManager
   gameplaySceneName: Level 1
   menuSceneName: MainMenu
+  ruleSceneName: RuleScenes
   musicSource: {fileID: 648885842}
   soundtrack: {fileID: 8300000, guid: 8b4ff56f182f07a428781a6b3c0fb050, type: 3}
   musicFadeDuration: 1.5
@@ -1183,7 +1184,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 648885836}
         m_TargetAssemblyTypeName: PreGameManager, Assembly-CSharp
-        m_MethodName: StartGame
+        m_MethodName: RulesMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

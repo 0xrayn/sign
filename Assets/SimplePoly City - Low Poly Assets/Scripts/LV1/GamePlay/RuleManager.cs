@@ -2,11 +2,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class PreGameManager : MonoBehaviour
+public class RuleManager : MonoBehaviour
 {
     [Header("Scene Settings")]
     public string gameplaySceneName = "Level1";
-    public string menuSceneName = "MainMenu"; 
     public string ruleSceneName = "RuleScenes"; 
 
     [Header("Audio Settings")]
@@ -33,12 +32,6 @@ public class PreGameManager : MonoBehaviour
     {
         PlayButtonSFX();
         StartCoroutine(StartGameSequence());
-    }
-
-    public void BackToMenu()
-    {
-        PlayButtonSFX();
-        StartCoroutine(BackToMenuSequence());
     }
 
         public void RulesMenu()
@@ -72,12 +65,6 @@ public class PreGameManager : MonoBehaviour
     {
         yield return StartCoroutine(FadeAudio(musicSource, 0f, musicFadeDuration));
         SceneManager.LoadScene(ruleSceneName);
-    }
-
-    private System.Collections.IEnumerator BackToMenuSequence()
-    {
-        yield return StartCoroutine(FadeAudio(musicSource, 0f, musicFadeDuration));
-        SceneManager.LoadScene(menuSceneName);
     }
 
     private void PlayButtonSFX()

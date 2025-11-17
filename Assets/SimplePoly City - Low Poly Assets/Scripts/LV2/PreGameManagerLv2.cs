@@ -2,12 +2,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class PreGameManager : MonoBehaviour
+public class PreGameManagerLv2 : MonoBehaviour
 {
     [Header("Scene Settings")]
-    public string gameplaySceneName = "Level1";
+    public string gameplaySceneName = "Level2";
     public string menuSceneName = "MainMenu"; 
-    public string ruleSceneName = "RuleScenes"; 
+    public string ruleSceneName = "RuleScenesLv2"; 
 
     [Header("Audio Settings")]
     public AudioSource musicSource;

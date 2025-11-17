@@ -277,8 +277,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 648885836}
-        m_TargetAssemblyTypeName: PreGameManager, Assembly-CSharp
+      - m_Target: {fileID: 648885843}
+        m_TargetAssemblyTypeName: PreGameManagerLv2, Assembly-CSharp
         m_MethodName: BackToMenu
         m_Mode: 1
         m_Arguments:
@@ -475,7 +475,7 @@ GameObject:
   - component: {fileID: 648885839}
   - component: {fileID: 648885838}
   - component: {fileID: 648885837}
-  - component: {fileID: 648885836}
+  - component: {fileID: 648885843}
   - component: {fileID: 648885842}
   - component: {fileID: 648885841}
   m_Layer: 5
@@ -485,25 +485,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &648885836
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 648885835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e8ec4af4b373fd41810b9a7c7b8124f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PreGameManager
-  gameplaySceneName: Level 1
-  menuSceneName: MainMenu
-  musicSource: {fileID: 648885842}
-  soundtrack: {fileID: 8300000, guid: 8b4ff56f182f07a428781a6b3c0fb050, type: 3}
-  musicFadeDuration: 1.5
-  sfxSource: {fileID: 648885841}
-  buttonClickSound: {fileID: 8300000, guid: e8249763726da774fb54542ae9292dee, type: 3}
 --- !u!114 &648885837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -785,6 +766,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &648885843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648885835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ed9f8746fbcba645ae750382a252843, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PreGameManagerLv2
+  gameplaySceneName: Level 2
+  menuSceneName: MainMenuLv2
+  ruleSceneName: RuleScenesLv2
+  musicSource: {fileID: 648885842}
+  soundtrack: {fileID: 8300000, guid: 8b4ff56f182f07a428781a6b3c0fb050, type: 3}
+  musicFadeDuration: 1.5
+  sfxSource: {fileID: 648885841}
+  buttonClickSound: {fileID: 8300000, guid: e8249763726da774fb54542ae9292dee, type: 3}
 --- !u!1 &992262993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1181,9 +1182,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 648885836}
-        m_TargetAssemblyTypeName: PreGameManager, Assembly-CSharp
-        m_MethodName: StartGame
+      - m_Target: {fileID: 648885843}
+        m_TargetAssemblyTypeName: PreGameManagerLv2, Assembly-CSharp
+        m_MethodName: RulesMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
