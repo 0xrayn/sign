@@ -1776,8 +1776,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -14, y: 0.00013733}
-  m_SizeDelta: {x: 289.11, y: 164.96}
+  m_AnchoredPosition: {x: -13.4449, y: 0.0012112}
+  m_SizeDelta: {x: 290.2201, y: 164.96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1382374035
 MonoBehaviour:
@@ -2670,14 +2670,11 @@ MonoBehaviour:
   m_text: 'Pelanggaran yang Dilarang:
 
 
-
     Dilarang melewati trotoar
-
 
 
     Dilarang
     menerobos lampu merah
-
 
 
     Dilarang melawan arah'
@@ -3168,7 +3165,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -194.53, y: -46}
+  m_AnchoredPosition: {x: -194.53, y: -74}
   m_SizeDelta: {x: 289.11, y: 73.66916}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2134916101
