@@ -15053,8 +15053,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PopupManager
   popupCanvas: {fileID: 506610458}
   popupText: {fileID: 1116894059}
-  fadeDuration: 0.5
-  displayDuration: 2
 --- !u!225 &506610458
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -22420,6 +22418,8 @@ MonoBehaviour:
   crashClip: {fileID: 8300000, guid: 9155d6fc65374d5448461f37a2e32172, type: 3}
   maxEnginePitch: 2
   minEnginePitch: 0.8
+  maxHits: 3
+  gameOverScene: GameOverScene
 --- !u!54 &730099744
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -39461,7 +39461,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 43.534966, y: -902.94885}
+  m_AnchoredPosition: {x: 43.534966, y: -665}
   m_SizeDelta: {x: 260.93, y: 89.898}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1206143107

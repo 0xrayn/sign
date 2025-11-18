@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(AudioSource))]
@@ -34,6 +36,16 @@ public class Controller : MonoBehaviour
 
     private float currentSpeed = 0f;
     private float targetSpeed = 0f;
+
+    // =====================================================
+    //  TAMBAHAN FITUR TABRAKAN (PENTING)
+    // =====================================================
+    [Header("Collision System")]
+    public int maxHits = 2;
+    private int hitCount = 0;
+    private bool hitCooldown = false;
+    public string gameOverScene = "GameOverScene";
+
 
     void Awake() => Instance = this;
 
@@ -114,7 +126,7 @@ public class Controller : MonoBehaviour
             }
         }
 
-        // 🔥 ANTI TEMBUS (PAKE VELOCITY, BUKAN MovePosition)
+        // 🔥 ANTI TEMBUS (PAKE VELOCITY)
         rb.linearVelocity = transform.forward * currentSpeed;
 
         // Rotasi
@@ -126,13 +138,60 @@ public class Controller : MonoBehaviour
         engineSource.pitch = Mathf.Lerp(minEnginePitch, maxEnginePitch, speedPercent);
     }
 
-    void OnCollisionEnter(Collision collision)
+    // =====================================================
+    //               SISTEM TABRAKAN LENGKAP
+    // =====================================================
+        void OnCollisionEnter(Collision collision)
     {
-        if (sfxSource != null && crashClip != null)
+        // ========= 1. SUARA TABRAKAN — SELALU BUNYI =========
+        float speed = rb.linearVelocity.magnitude;
+        float strength = Mathf.Clamp01(speed / 20f);
+
+        float volume = Mathf.Lerp(0.3f, 1f, strength);
+        float pitch = Mathf.Lerp(0.8f, 1.2f, strength);
+
+        sfxSource.pitch = pitch;
+        sfxSource.PlayOneShot(crashClip, volume);   // ALWAYS sound
+
+
+        // ========= 2. CEK NPC UNTUK DAMAGE =========
+        NPCCar npc = collision.collider.GetComponent<NPCCar>();
+        if (npc == null)
+            return;  // kalau bukan NPC, selesai sampai di sini (tidak tambah hit)
+
+
+        // ========= 3. NPC → DAMAGE + POPUP + GAMEOVER =========
+        if (hitCooldown) return;
+        hitCooldown = true;
+        StartCoroutine(HitCooldownRoutine());
+
+        hitCount++;
+
+        // POPUP WARNING
+        if (hitCount < maxHits)
         {
-            sfxSource.clip = crashClip;
-            sfxSource.Play();
+            PopupManager.Instance?.ShowWarning($"PERINGATAN! ({hitCount}/{maxHits})");
+            return;
         }
+
+        // GAME OVER
+        StartCoroutine(GameOverRoutine());
+    }
+
+    IEnumerator HitCooldownRoutine()
+    {
+        yield return new WaitForSeconds(3.5f);
+        hitCooldown = false;
+    }
+
+    IEnumerator GameOverRoutine()
+    {
+        // Slow motion sedikit
+        Time.timeScale = 0.20f;
+        yield return new WaitForSecondsRealtime(3.5f);
+        Time.timeScale = 1f;
+
+        SceneManager.LoadScene(gameOverScene);
     }
 
     public float GetCurrentSpeed()

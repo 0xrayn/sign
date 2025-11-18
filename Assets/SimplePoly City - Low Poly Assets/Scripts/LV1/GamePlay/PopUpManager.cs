@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 using System.Collections;
 
@@ -6,47 +7,66 @@ public class PopupManager : MonoBehaviour
 {
     public static PopupManager Instance;
 
+    [Header("UI")]
     public CanvasGroup popupCanvas;
-    public TMP_Text popupText;
-    public float fadeDuration = 0.5f;
-    public float displayDuration = 2f;
+    public TextMeshProUGUI popupText;
 
-    void Awake() => Instance = this;
-
-    public void ShowPopup(string message)
+    private void Awake()
     {
-        StopAllCoroutines();
-        StartCoroutine(PopupRoutine(message));
+        if (Instance == null) Instance = this;
+        else Destroy(gameObject);
+
+        popupCanvas.alpha = 0;
     }
 
-    IEnumerator PopupRoutine(string msg)
+    // POPUP NORMAL
+    public void ShowPopup(string message, float duration = 1.2f)
+    {
+        StopAllCoroutines();
+        StartCoroutine(PopupRoutine(message, duration));
+    }
+
+    IEnumerator PopupRoutine(string msg, float duration)
     {
         popupText.text = msg;
+        popupText.color = Color.white;
 
-        popupCanvas.alpha = 0;
-        popupCanvas.gameObject.SetActive(true); // GameObject tetap aktif
-
-        // Fade In
-        float t = 0;
-        while (t < fadeDuration)
-        {
-            popupCanvas.alpha = Mathf.Lerp(0, 1, t / fadeDuration);
-            t += Time.deltaTime;
-            yield return null;
-        }
         popupCanvas.alpha = 1;
-
-        yield return new WaitForSeconds(displayDuration);
-
-        // Fade Out
-        t = 0;
-        while (t < fadeDuration)
-        {
-            popupCanvas.alpha = Mathf.Lerp(1, 0, t / fadeDuration);
-            t += Time.deltaTime;
-            yield return null;
-        }
+        yield return new WaitForSeconds(duration);
 
         popupCanvas.alpha = 0;
+    }
+
+    // POPUP WARNING MERAH BERKEDIP
+    public void ShowWarning(string message)
+    {
+        StopAllCoroutines();
+        StartCoroutine(WarningRoutine(message));
+    }
+
+    IEnumerator WarningRoutine(string msg)
+    {
+        popupText.text = msg;
+        popupText.color = Color.red;
+
+        popupCanvas.gameObject.SetActive(true);
+
+        // Kedip merah 3x
+        for (int i = 0; i < 3; i++)
+        {
+            popupCanvas.alpha = 1;
+            yield return new WaitForSeconds(0.15f);
+
+            popupCanvas.alpha = 0;
+            yield return new WaitForSeconds(0.15f);
+        }
+
+        // Stabil sebentar
+        popupCanvas.alpha = 1;
+        yield return new WaitForSeconds(0.8f);
+
+        // Reset
+        popupCanvas.alpha = 0;
+        popupText.color = Color.white;
     }
 }
