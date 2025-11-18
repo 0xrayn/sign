@@ -779,7 +779,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PreGameManagerLv2
   gameplaySceneName: Level 2
-  menuSceneName: MainMenuLv2
+  menuSceneName: MainMenu
   ruleSceneName: RuleScenesLv2
   musicSource: {fileID: 648885842}
   soundtrack: {fileID: 8300000, guid: 8b4ff56f182f07a428781a6b3c0fb050, type: 3}
