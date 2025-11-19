@@ -857,7 +857,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8698539237512216479, guid: e22fad9e70ae94d42885f95bddd898ce, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 20471809}
+      addedObject: {fileID: 20471810}
   m_SourcePrefab: {fileID: 100100000, guid: e22fad9e70ae94d42885f95bddd898ce, type: 3}
 --- !u!4 &20471807 stripped
 Transform:
@@ -869,7 +869,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8698539237512216479, guid: e22fad9e70ae94d42885f95bddd898ce, type: 3}
   m_PrefabInstance: {fileID: 20471806}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &20471809
+--- !u!114 &20471810
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -878,9 +878,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 20471808}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67919a9de0d683349a2901346ef2bef7, type: 3}
+  m_Script: {fileID: 11500000, guid: df49fc645362ab645848eb7cc6b00313, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PackagePickup
+  m_EditorClassIdentifier: Assembly-CSharp::PackagePickupLv2
   pickupSound: {fileID: 8300000, guid: fcbc48b73e262394e97332faf080f172, type: 3}
 --- !u!1 &21539496
 GameObject:
@@ -1391,7 +1391,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8698539237512216479, guid: e22fad9e70ae94d42885f95bddd898ce, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 45807750}
+      addedObject: {fileID: 45807751}
   m_SourcePrefab: {fileID: 100100000, guid: e22fad9e70ae94d42885f95bddd898ce, type: 3}
 --- !u!4 &45807748 stripped
 Transform:
@@ -1403,7 +1403,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8698539237512216479, guid: e22fad9e70ae94d42885f95bddd898ce, type: 3}
   m_PrefabInstance: {fileID: 45807747}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &45807750
+--- !u!114 &45807751
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1412,9 +1412,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 45807749}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67919a9de0d683349a2901346ef2bef7, type: 3}
+  m_Script: {fileID: 11500000, guid: df49fc645362ab645848eb7cc6b00313, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PackagePickup
+  m_EditorClassIdentifier: Assembly-CSharp::PackagePickupLv2
   pickupSound: {fileID: 8300000, guid: fcbc48b73e262394e97332faf080f172, type: 3}
 --- !u!1001 &46095973
 PrefabInstance:
@@ -2338,7 +2338,7 @@ GameObject:
   - component: {fileID: 76383892}
   - component: {fileID: 76383891}
   - component: {fileID: 76383890}
-  - component: {fileID: 76383889}
+  - component: {fileID: 76383893}
   m_Layer: 0
   m_Name: Trotoar (12)
   m_TagString: Untagged
@@ -2346,21 +2346,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &76383889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 76383888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eea0519bafa5834db90e4048852e37b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TrotoarTrigger
-  penaltyTime: 12
-  audioSource: {fileID: 76383890}
-  sidewalkSound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!82 &76383890
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2494,6 +2479,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1873146040}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &76383893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76383888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58745fa616617824183f455de101f771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrotoarTriggerLv2
+  penaltyTime: 15
+  audioSource: {fileID: 76383890}
+  sidewalkSound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!1001 &76804430
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3997,7 +3997,7 @@ GameObject:
   - component: {fileID: 129009655}
   - component: {fileID: 129009654}
   - component: {fileID: 129009653}
-  - component: {fileID: 129009652}
+  - component: {fileID: 129009656}
   m_Layer: 0
   m_Name: Trotoar (4)
   m_TagString: Untagged
@@ -4005,21 +4005,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &129009652
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 129009651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eea0519bafa5834db90e4048852e37b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TrotoarTrigger
-  penaltyTime: 12
-  audioSource: {fileID: 129009653}
-  sidewalkSound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!82 &129009653
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4153,6 +4138,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1873146040}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &129009656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129009651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58745fa616617824183f455de101f771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrotoarTriggerLv2
+  penaltyTime: 15
+  audioSource: {fileID: 76383890}
+  sidewalkSound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!1001 &130625327
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4647,7 +4647,7 @@ GameObject:
   - component: {fileID: 147270799}
   - component: {fileID: 147270798}
   - component: {fileID: 147270797}
-  - component: {fileID: 147270796}
+  - component: {fileID: 147270800}
   m_Layer: 0
   m_Name: Trotoar
   m_TagString: Untagged
@@ -4655,21 +4655,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &147270796
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 147270795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eea0519bafa5834db90e4048852e37b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TrotoarTrigger
-  penaltyTime: 12
-  audioSource: {fileID: 147270797}
-  sidewalkSound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!82 &147270797
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4803,6 +4788,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1873146040}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &147270800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147270795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58745fa616617824183f455de101f771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrotoarTriggerLv2
+  penaltyTime: 15
+  audioSource: {fileID: 76383890}
+  sidewalkSound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!1 &147620559 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 0ee6d569ec3227e40888e8151b331e0f, type: 3}
@@ -4819,7 +4819,7 @@ GameObject:
   - component: {fileID: 147819087}
   - component: {fileID: 147819086}
   - component: {fileID: 147819085}
-  - component: {fileID: 147819084}
+  - component: {fileID: 147819088}
   m_Layer: 0
   m_Name: Trotoar (15)
   m_TagString: Untagged
@@ -4827,21 +4827,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &147819084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 147819083}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eea0519bafa5834db90e4048852e37b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TrotoarTrigger
-  penaltyTime: 12
-  audioSource: {fileID: 147819085}
-  sidewalkSound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!82 &147819085
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4975,6 +4960,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1873146040}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &147819088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147819083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58745fa616617824183f455de101f771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrotoarTriggerLv2
+  penaltyTime: 15
+  audioSource: {fileID: 76383890}
+  sidewalkSound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!1 &150513409 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: b82e76f4092b7d24aaeecddf36fe8d3b, type: 3}
@@ -5918,8 +5918,8 @@ GameObject:
   - component: {fileID: 174683057}
   - component: {fileID: 174683060}
   - component: {fileID: 174683059}
-  - component: {fileID: 174683058}
   - component: {fileID: 174683061}
+  - component: {fileID: 174683062}
   m_Layer: 0
   m_Name: AreaLampuMerah_Player (3)
   m_TagString: Untagged
@@ -5942,21 +5942,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2015155294}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &174683058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 174683056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69aa857ea6b5a0143a6ccc851c181824, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedLightTrigger
-  penaltyTime: 15
-  audioSource: {fileID: 174683061}
-  penaltySound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!65 &174683059
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6088,6 +6073,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &174683062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174683056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c25a64c558cef334c82b1f88aa7d205e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RedLightTriggerLv2
+  penaltyTime: 15
+  audioSource: {fileID: 174683061}
+  penaltySound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!1001 &174753946
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7209,8 +7209,8 @@ GameObject:
   m_Component:
   - component: {fileID: 226533661}
   - component: {fileID: 226533663}
-  - component: {fileID: 226533662}
   - component: {fileID: 226533664}
+  - component: {fileID: 226533665}
   m_Layer: 0
   m_Name: GameObject (3)
   m_TagString: Untagged
@@ -7233,21 +7233,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 890442263}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &226533662
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 226533660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4246bb908a941744ca8b7551aa3ee2a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WrongWayTrigger
-  penaltyTime: 15
-  audioSource: {fileID: 226533664}
-  wrongWaySound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!65 &226533663
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7366,6 +7351,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &226533665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226533660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f9ea0a9f634e4a44878e7fd8103a13e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WrongWayTriggerLv2
+  penaltyTime: 15
+  audioSource: {fileID: 226533664}
+  wrongWaySound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!1 &227098044 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 0ee6d569ec3227e40888e8151b331e0f, type: 3}
@@ -7413,7 +7413,7 @@ GameObject:
   - component: {fileID: 229031423}
   - component: {fileID: 229031422}
   - component: {fileID: 229031421}
-  - component: {fileID: 229031420}
+  - component: {fileID: 229031424}
   m_Layer: 0
   m_Name: Trotoar (9)
   m_TagString: Untagged
@@ -7421,21 +7421,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &229031420
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 229031419}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eea0519bafa5834db90e4048852e37b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TrotoarTrigger
-  penaltyTime: 12
-  audioSource: {fileID: 229031421}
-  sidewalkSound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!82 &229031421
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7569,6 +7554,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1873146040}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &229031424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229031419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58745fa616617824183f455de101f771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrotoarTriggerLv2
+  penaltyTime: 15
+  audioSource: {fileID: 76383890}
+  sidewalkSound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!1001 &229591815
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8775,7 +8775,7 @@ GameObject:
   - component: {fileID: 270978456}
   - component: {fileID: 270978455}
   - component: {fileID: 270978454}
-  - component: {fileID: 270978453}
+  - component: {fileID: 270978457}
   m_Layer: 0
   m_Name: Trotoar (10)
   m_TagString: Untagged
@@ -8783,21 +8783,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &270978453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 270978452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eea0519bafa5834db90e4048852e37b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TrotoarTrigger
-  penaltyTime: 12
-  audioSource: {fileID: 270978454}
-  sidewalkSound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!82 &270978454
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8931,6 +8916,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1873146040}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &270978457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270978452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58745fa616617824183f455de101f771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrotoarTriggerLv2
+  penaltyTime: 15
+  audioSource: {fileID: 76383890}
+  sidewalkSound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!1001 &273599203
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10381,7 +10381,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8698539237512216479, guid: e22fad9e70ae94d42885f95bddd898ce, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 337759670}
+      addedObject: {fileID: 337759671}
   m_SourcePrefab: {fileID: 100100000, guid: e22fad9e70ae94d42885f95bddd898ce, type: 3}
 --- !u!4 &337759668 stripped
 Transform:
@@ -10393,7 +10393,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8698539237512216479, guid: e22fad9e70ae94d42885f95bddd898ce, type: 3}
   m_PrefabInstance: {fileID: 337759667}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &337759670
+--- !u!114 &337759671
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10402,9 +10402,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 337759669}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67919a9de0d683349a2901346ef2bef7, type: 3}
+  m_Script: {fileID: 11500000, guid: df49fc645362ab645848eb7cc6b00313, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PackagePickup
+  m_EditorClassIdentifier: Assembly-CSharp::PackagePickupLv2
   pickupSound: {fileID: 8300000, guid: fcbc48b73e262394e97332faf080f172, type: 3}
 --- !u!1 &338337838 stripped
 GameObject:
@@ -11144,7 +11144,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8698539237512216479, guid: e22fad9e70ae94d42885f95bddd898ce, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 358393759}
+      addedObject: {fileID: 358393760}
   m_SourcePrefab: {fileID: 100100000, guid: e22fad9e70ae94d42885f95bddd898ce, type: 3}
 --- !u!4 &358393757 stripped
 Transform:
@@ -11156,7 +11156,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8698539237512216479, guid: e22fad9e70ae94d42885f95bddd898ce, type: 3}
   m_PrefabInstance: {fileID: 358393756}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &358393759
+--- !u!114 &358393760
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11165,9 +11165,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 358393758}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67919a9de0d683349a2901346ef2bef7, type: 3}
+  m_Script: {fileID: 11500000, guid: df49fc645362ab645848eb7cc6b00313, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PackagePickup
+  m_EditorClassIdentifier: Assembly-CSharp::PackagePickupLv2
   pickupSound: {fileID: 8300000, guid: fcbc48b73e262394e97332faf080f172, type: 3}
 --- !u!1 &358418666 stripped
 GameObject:
@@ -11352,8 +11352,8 @@ GameObject:
   - component: {fileID: 364300003}
   - component: {fileID: 364300006}
   - component: {fileID: 364300005}
-  - component: {fileID: 364300004}
   - component: {fileID: 364300007}
+  - component: {fileID: 364300008}
   m_Layer: 0
   m_Name: AreaLampuMerah_Player (9)
   m_TagString: Untagged
@@ -11376,21 +11376,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2015155294}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &364300004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 364300002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69aa857ea6b5a0143a6ccc851c181824, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedLightTrigger
-  penaltyTime: 15
-  audioSource: {fileID: 364300007}
-  penaltySound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!65 &364300005
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11522,6 +11507,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &364300008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364300002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c25a64c558cef334c82b1f88aa7d205e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RedLightTriggerLv2
+  penaltyTime: 15
+  audioSource: {fileID: 174683061}
+  penaltySound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!1 &370928994
 GameObject:
   m_ObjectHideFlags: 0
@@ -11533,7 +11533,7 @@ GameObject:
   - component: {fileID: 370928998}
   - component: {fileID: 370928997}
   - component: {fileID: 370928996}
-  - component: {fileID: 370928995}
+  - component: {fileID: 370928999}
   m_Layer: 0
   m_Name: Trotoar (5)
   m_TagString: Untagged
@@ -11541,21 +11541,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &370928995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 370928994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eea0519bafa5834db90e4048852e37b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TrotoarTrigger
-  penaltyTime: 12
-  audioSource: {fileID: 370928996}
-  sidewalkSound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!82 &370928996
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11689,6 +11674,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1873146040}
   m_LocalEulerAnglesHint: {x: 0, y: 152.45, z: 0}
+--- !u!114 &370928999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370928994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58745fa616617824183f455de101f771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrotoarTriggerLv2
+  penaltyTime: 15
+  audioSource: {fileID: 76383890}
+  sidewalkSound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!1001 &373016368
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12074,7 +12074,7 @@ GameObject:
   - component: {fileID: 392257432}
   - component: {fileID: 392257431}
   - component: {fileID: 392257430}
-  - component: {fileID: 392257429}
+  - component: {fileID: 392257433}
   m_Layer: 0
   m_Name: Trotoar (14)
   m_TagString: Untagged
@@ -12082,21 +12082,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &392257429
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 392257428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eea0519bafa5834db90e4048852e37b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TrotoarTrigger
-  penaltyTime: 12
-  audioSource: {fileID: 392257430}
-  sidewalkSound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!82 &392257430
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12230,6 +12215,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1873146040}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &392257433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392257428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58745fa616617824183f455de101f771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrotoarTriggerLv2
+  penaltyTime: 15
+  audioSource: {fileID: 76383890}
+  sidewalkSound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!1 &394237001 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 0ee37198b24b2164fbbccfbe92fe5d35, type: 3}
@@ -15866,8 +15866,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PopupManager
   popupCanvas: {fileID: 506610458}
   popupText: {fileID: 1116894059}
-  fadeDuration: 0.5
-  displayDuration: 2
 --- !u!225 &506610458
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -16382,8 +16380,8 @@ GameObject:
   - component: {fileID: 521082760}
   - component: {fileID: 521082763}
   - component: {fileID: 521082762}
-  - component: {fileID: 521082761}
   - component: {fileID: 521082764}
+  - component: {fileID: 521082765}
   m_Layer: 0
   m_Name: AreaLampuMerah_Player (2)
   m_TagString: Untagged
@@ -16406,21 +16404,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2015155294}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &521082761
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 521082759}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69aa857ea6b5a0143a6ccc851c181824, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedLightTrigger
-  penaltyTime: 15
-  audioSource: {fileID: 521082764}
-  penaltySound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!65 &521082762
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16552,6 +16535,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &521082765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 521082759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c25a64c558cef334c82b1f88aa7d205e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RedLightTriggerLv2
+  penaltyTime: 15
+  audioSource: {fileID: 174683061}
+  penaltySound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!1 &525295280 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100002, guid: 0b6fafa63b69b174584365f2641586a4, type: 3}
@@ -18629,8 +18627,8 @@ GameObject:
   m_Component:
   - component: {fileID: 587563727}
   - component: {fileID: 587563729}
-  - component: {fileID: 587563728}
   - component: {fileID: 587563730}
+  - component: {fileID: 587563731}
   m_Layer: 0
   m_Name: GameObject (1)
   m_TagString: Untagged
@@ -18653,21 +18651,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 890442263}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &587563728
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 587563726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4246bb908a941744ca8b7551aa3ee2a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WrongWayTrigger
-  penaltyTime: 15
-  audioSource: {fileID: 587563730}
-  wrongWaySound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!65 &587563729
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18786,6 +18769,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &587563731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587563726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f9ea0a9f634e4a44878e7fd8103a13e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WrongWayTriggerLv2
+  penaltyTime: 15
+  audioSource: {fileID: 226533664}
+  wrongWaySound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!1001 &589646287
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19484,7 +19482,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8698539237512216479, guid: e22fad9e70ae94d42885f95bddd898ce, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 611174129}
+      addedObject: {fileID: 611174130}
   m_SourcePrefab: {fileID: 100100000, guid: e22fad9e70ae94d42885f95bddd898ce, type: 3}
 --- !u!4 &611174127 stripped
 Transform:
@@ -19496,7 +19494,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8698539237512216479, guid: e22fad9e70ae94d42885f95bddd898ce, type: 3}
   m_PrefabInstance: {fileID: 611174126}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &611174129
+--- !u!114 &611174130
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -19505,9 +19503,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 611174128}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67919a9de0d683349a2901346ef2bef7, type: 3}
+  m_Script: {fileID: 11500000, guid: df49fc645362ab645848eb7cc6b00313, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PackagePickup
+  m_EditorClassIdentifier: Assembly-CSharp::PackagePickupLv2
   pickupSound: {fileID: 8300000, guid: fcbc48b73e262394e97332faf080f172, type: 3}
 --- !u!1 &611875467 stripped
 GameObject:
@@ -23255,9 +23253,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 730099743}
-    - targetCorrespondingSourceObject: {fileID: 100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 730099744}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
       insertIndex: -1
@@ -23265,6 +23260,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 730099750}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 730099751}
   m_SourcePrefab: {fileID: 100100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
 --- !u!4 &730099741 stripped
 Transform:
@@ -23276,29 +23274,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
   m_PrefabInstance: {fileID: 730099740}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &730099743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 730099742}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5464b5f7dfc001d419eb982bcc1ddd5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Controller
-  speed: 13
-  sprintMultiplier: 1.5
-  rotationSpeed: 120
-  acceleration: 4
-  deceleration: 6
-  brakeDeceleration: 12
-  engineClip: {fileID: 8300000, guid: 0b699a09fd77e5949bdf13bf614e40b5, type: 3}
-  brakeClip: {fileID: 8300000, guid: a3afbfc85321bd048a6c97dac10af2c4, type: 3}
-  crashClip: {fileID: 8300000, guid: 9155d6fc65374d5448461f37a2e32172, type: 3}
-  maxEnginePitch: 2
-  minEnginePitch: 0.8
 --- !u!54 &730099744
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -23444,6 +23419,31 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &730099751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730099742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 530c43a65dd41bf4fbbf301262cc36ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ControllerLv2
+  speed: 13
+  sprintMultiplier: 1.5
+  rotationSpeed: 120
+  acceleration: 4
+  deceleration: 6
+  brakeDeceleration: 12
+  engineClip: {fileID: 8300000, guid: 0b699a09fd77e5949bdf13bf614e40b5, type: 3}
+  brakeClip: {fileID: 8300000, guid: a3afbfc85321bd048a6c97dac10af2c4, type: 3}
+  crashClip: {fileID: 8300000, guid: 9155d6fc65374d5448461f37a2e32172, type: 3}
+  maxEnginePitch: 2
+  minEnginePitch: 0.8
+  maxHits: 3
+  gameOverScene: GameOverSceneLv2
 --- !u!1 &730156771
 GameObject:
   m_ObjectHideFlags: 0
@@ -23454,8 +23454,8 @@ GameObject:
   m_Component:
   - component: {fileID: 730156772}
   - component: {fileID: 730156774}
-  - component: {fileID: 730156773}
   - component: {fileID: 730156775}
+  - component: {fileID: 730156776}
   m_Layer: 0
   m_Name: GameObject (5)
   m_TagString: Untagged
@@ -23478,21 +23478,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 890442263}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &730156773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 730156771}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4246bb908a941744ca8b7551aa3ee2a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WrongWayTrigger
-  penaltyTime: 15
-  audioSource: {fileID: 730156775}
-  wrongWaySound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!65 &730156774
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23611,6 +23596,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &730156776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730156771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f9ea0a9f634e4a44878e7fd8103a13e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WrongWayTriggerLv2
+  penaltyTime: 15
+  audioSource: {fileID: 226533664}
+  wrongWaySound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!1001 &733211883
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24513,8 +24513,8 @@ GameObject:
   m_Component:
   - component: {fileID: 752775663}
   - component: {fileID: 752775662}
-  - component: {fileID: 752775661}
   - component: {fileID: 752775664}
+  - component: {fileID: 752775665}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -24522,21 +24522,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &752775661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 752775660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4246bb908a941744ca8b7551aa3ee2a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WrongWayTrigger
-  penaltyTime: 15
-  audioSource: {fileID: 752775664}
-  wrongWaySound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!65 &752775662
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24670,6 +24655,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &752775665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752775660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f9ea0a9f634e4a44878e7fd8103a13e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WrongWayTriggerLv2
+  penaltyTime: 15
+  audioSource: {fileID: 226533664}
+  wrongWaySound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!1001 &758420302
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27452,7 +27452,12 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8698539237512216479, guid: e22fad9e70ae94d42885f95bddd898ce, type: 3}
   m_PrefabInstance: {fileID: 1953999528}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &852971718
+--- !u!4 &852971722 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4607789021669949657, guid: e22fad9e70ae94d42885f95bddd898ce, type: 3}
+  m_PrefabInstance: {fileID: 1953999528}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &852971723
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -27461,15 +27466,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 852971717}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67919a9de0d683349a2901346ef2bef7, type: 3}
+  m_Script: {fileID: 11500000, guid: df49fc645362ab645848eb7cc6b00313, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PackagePickup
+  m_EditorClassIdentifier: Assembly-CSharp::PackagePickupLv2
   pickupSound: {fileID: 8300000, guid: fcbc48b73e262394e97332faf080f172, type: 3}
---- !u!4 &852971722 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4607789021669949657, guid: e22fad9e70ae94d42885f95bddd898ce, type: 3}
-  m_PrefabInstance: {fileID: 1953999528}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &853094800 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: dac1a631b172e66469fb09e9987bcf57, type: 3}
@@ -28778,7 +28778,7 @@ GameObject:
   - component: {fileID: 885202591}
   - component: {fileID: 885202590}
   - component: {fileID: 885202589}
-  - component: {fileID: 885202588}
+  - component: {fileID: 885202592}
   m_Layer: 0
   m_Name: Trotoar (13)
   m_TagString: Untagged
@@ -28786,21 +28786,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &885202588
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 885202587}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eea0519bafa5834db90e4048852e37b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TrotoarTrigger
-  penaltyTime: 12
-  audioSource: {fileID: 885202589}
-  sidewalkSound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!82 &885202589
 AudioSource:
   m_ObjectHideFlags: 0
@@ -28934,6 +28919,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1873146040}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &885202592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885202587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58745fa616617824183f455de101f771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrotoarTriggerLv2
+  penaltyTime: 15
+  audioSource: {fileID: 76383890}
+  sidewalkSound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!1 &885850955 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 1d53359c70324d14c989d7058b50ec6b, type: 3}
@@ -29399,7 +29399,7 @@ GameObject:
   - component: {fileID: 904540157}
   - component: {fileID: 904540160}
   - component: {fileID: 904540159}
-  - component: {fileID: 904540158}
+  - component: {fileID: 904540161}
   m_Layer: 0
   m_Name: Trotoar (21)
   m_TagString: Untagged
@@ -29422,21 +29422,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1873146040}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &904540158
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 904540156}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eea0519bafa5834db90e4048852e37b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TrotoarTrigger
-  penaltyTime: 12
-  audioSource: {fileID: 904540159}
-  sidewalkSound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!82 &904540159
 AudioSource:
   m_ObjectHideFlags: 0
@@ -29555,6 +29540,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &904540161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904540156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58745fa616617824183f455de101f771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrotoarTriggerLv2
+  penaltyTime: 15
+  audioSource: {fileID: 76383890}
+  sidewalkSound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!1 &910347816 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 8fa324388c16b5c4eac9846338b35b17, type: 3}
@@ -29683,8 +29683,8 @@ GameObject:
   - component: {fileID: 913576937}
   - component: {fileID: 913576940}
   - component: {fileID: 913576939}
-  - component: {fileID: 913576938}
   - component: {fileID: 913576941}
+  - component: {fileID: 913576942}
   m_Layer: 0
   m_Name: AreaLampuMerah_Player
   m_TagString: Untagged
@@ -29707,21 +29707,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2015155294}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &913576938
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 913576936}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69aa857ea6b5a0143a6ccc851c181824, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedLightTrigger
-  penaltyTime: 15
-  audioSource: {fileID: 913576941}
-  penaltySound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!65 &913576939
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29853,6 +29838,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &913576942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913576936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c25a64c558cef334c82b1f88aa7d205e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RedLightTriggerLv2
+  penaltyTime: 15
+  audioSource: {fileID: 174683061}
+  penaltySound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!1 &915878893 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 31bbda51eeab02f44a8e92a7da2f5ff8, type: 3}
@@ -32534,8 +32534,8 @@ GameObject:
   - component: {fileID: 993698332}
   - component: {fileID: 993698334}
   - component: {fileID: 993698333}
-  - component: {fileID: 993698335}
   - component: {fileID: 993698336}
+  - component: {fileID: 993698337}
   m_Layer: 5
   m_Name: HUDPanel
   m_TagString: Untagged
@@ -32609,32 +32609,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 993698331}
   m_CullTransparentMesh: 1
---- !u!114 &993698335
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 993698331}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7a6616f9312f9d47a47c87a30797c53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HUDManager
-  timeText: {fileID: 1870224129}
-  packageText: {fileID: 500937852}
-  speedText: {fileID: 1206143107}
-  stars:
-  - {fileID: 794654921}
-  - {fileID: 662481148}
-  - {fileID: 798568736}
-  totalPackages: 15
-  timer: 0
-  collectedPackages: 0
-  allPackagesCollected: 0
-  bgmSource: {fileID: 993698336}
-  backgroundMusic: {fileID: 8300000, guid: 3172847f4ef55cf4b89438bb799c104d, type: 3}
-  fadeDuration: 1.5
 --- !u!82 &993698336
 AudioSource:
   m_ObjectHideFlags: 0
@@ -32732,6 +32706,32 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &993698337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993698331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b75c74eda0684ec47b0a91233c0bd70d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HudManagerLv2
+  timeText: {fileID: 1870224129}
+  packageText: {fileID: 500937852}
+  speedText: {fileID: 1206143107}
+  stars:
+  - {fileID: 794654921}
+  - {fileID: 662481148}
+  - {fileID: 798568736}
+  totalPackages: 15
+  timer: 0
+  collectedPackages: 0
+  allPackagesCollected: 0
+  bgmSource: {fileID: 993698336}
+  backgroundMusic: {fileID: 8300000, guid: 3172847f4ef55cf4b89438bb799c104d, type: 3}
+  fadeDuration: 1.5
 --- !u!4 &995657695 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 426770, guid: 12e4450028433344a81a6359e525182e, type: 3}
@@ -32775,7 +32775,7 @@ GameObject:
   - component: {fileID: 1001481973}
   - component: {fileID: 1001481972}
   - component: {fileID: 1001481971}
-  - component: {fileID: 1001481970}
+  - component: {fileID: 1001481974}
   m_Layer: 0
   m_Name: Trotoar (2)
   m_TagString: Untagged
@@ -32783,21 +32783,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1001481970
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1001481969}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eea0519bafa5834db90e4048852e37b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TrotoarTrigger
-  penaltyTime: 12
-  audioSource: {fileID: 1001481971}
-  sidewalkSound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!82 &1001481971
 AudioSource:
   m_ObjectHideFlags: 0
@@ -32931,6 +32916,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1873146040}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1001481974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001481969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58745fa616617824183f455de101f771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrotoarTriggerLv2
+  penaltyTime: 15
+  audioSource: {fileID: 76383890}
+  sidewalkSound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!4 &1001804919 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 426770, guid: 12e4450028433344a81a6359e525182e, type: 3}
@@ -34195,8 +34195,8 @@ GameObject:
   - component: {fileID: 1042159373}
   - component: {fileID: 1042159376}
   - component: {fileID: 1042159375}
-  - component: {fileID: 1042159374}
   - component: {fileID: 1042159377}
+  - component: {fileID: 1042159378}
   m_Layer: 0
   m_Name: AreaLampuMerah_Player (4)
   m_TagString: Untagged
@@ -34219,21 +34219,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2015155294}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1042159374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1042159372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69aa857ea6b5a0143a6ccc851c181824, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedLightTrigger
-  penaltyTime: 15
-  audioSource: {fileID: 1042159377}
-  penaltySound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!65 &1042159375
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34365,6 +34350,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1042159378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042159372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c25a64c558cef334c82b1f88aa7d205e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RedLightTriggerLv2
+  penaltyTime: 15
+  audioSource: {fileID: 174683061}
+  penaltySound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!1001 &1042576041
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35822,7 +35822,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8698539237512216479, guid: e22fad9e70ae94d42885f95bddd898ce, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1091193844}
+      addedObject: {fileID: 1091193845}
   m_SourcePrefab: {fileID: 100100000, guid: e22fad9e70ae94d42885f95bddd898ce, type: 3}
 --- !u!4 &1091193842 stripped
 Transform:
@@ -35834,7 +35834,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8698539237512216479, guid: e22fad9e70ae94d42885f95bddd898ce, type: 3}
   m_PrefabInstance: {fileID: 1091193841}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1091193844
+--- !u!114 &1091193845
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -35843,9 +35843,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1091193843}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67919a9de0d683349a2901346ef2bef7, type: 3}
+  m_Script: {fileID: 11500000, guid: df49fc645362ab645848eb7cc6b00313, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PackagePickup
+  m_EditorClassIdentifier: Assembly-CSharp::PackagePickupLv2
   pickupSound: {fileID: 8300000, guid: fcbc48b73e262394e97332faf080f172, type: 3}
 --- !u!1 &1092041402 stripped
 GameObject:
@@ -36534,7 +36534,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8698539237512216479, guid: e22fad9e70ae94d42885f95bddd898ce, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1103003784}
+      addedObject: {fileID: 1103003785}
   m_SourcePrefab: {fileID: 100100000, guid: e22fad9e70ae94d42885f95bddd898ce, type: 3}
 --- !u!4 &1103003782 stripped
 Transform:
@@ -36546,7 +36546,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8698539237512216479, guid: e22fad9e70ae94d42885f95bddd898ce, type: 3}
   m_PrefabInstance: {fileID: 1103003781}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1103003784
+--- !u!114 &1103003785
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -36555,9 +36555,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1103003783}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67919a9de0d683349a2901346ef2bef7, type: 3}
+  m_Script: {fileID: 11500000, guid: df49fc645362ab645848eb7cc6b00313, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PackagePickup
+  m_EditorClassIdentifier: Assembly-CSharp::PackagePickupLv2
   pickupSound: {fileID: 8300000, guid: fcbc48b73e262394e97332faf080f172, type: 3}
 --- !u!1 &1103197568 stripped
 GameObject:
@@ -36805,7 +36805,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8698539237512216479, guid: e22fad9e70ae94d42885f95bddd898ce, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1112405205}
+      addedObject: {fileID: 1112405206}
   m_SourcePrefab: {fileID: 100100000, guid: e22fad9e70ae94d42885f95bddd898ce, type: 3}
 --- !u!4 &1112405203 stripped
 Transform:
@@ -36817,7 +36817,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8698539237512216479, guid: e22fad9e70ae94d42885f95bddd898ce, type: 3}
   m_PrefabInstance: {fileID: 1112405202}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1112405205
+--- !u!114 &1112405206
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -36826,9 +36826,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1112405204}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67919a9de0d683349a2901346ef2bef7, type: 3}
+  m_Script: {fileID: 11500000, guid: df49fc645362ab645848eb7cc6b00313, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PackagePickup
+  m_EditorClassIdentifier: Assembly-CSharp::PackagePickupLv2
   pickupSound: {fileID: 8300000, guid: fcbc48b73e262394e97332faf080f172, type: 3}
 --- !u!1 &1113644985 stripped
 GameObject:
@@ -40783,7 +40783,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8698539237512216479, guid: e22fad9e70ae94d42885f95bddd898ce, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1210719713}
+      addedObject: {fileID: 1210719714}
   m_SourcePrefab: {fileID: 100100000, guid: e22fad9e70ae94d42885f95bddd898ce, type: 3}
 --- !u!4 &1210719711 stripped
 Transform:
@@ -40795,7 +40795,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8698539237512216479, guid: e22fad9e70ae94d42885f95bddd898ce, type: 3}
   m_PrefabInstance: {fileID: 1210719710}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1210719713
+--- !u!114 &1210719714
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40804,9 +40804,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1210719712}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67919a9de0d683349a2901346ef2bef7, type: 3}
+  m_Script: {fileID: 11500000, guid: df49fc645362ab645848eb7cc6b00313, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PackagePickup
+  m_EditorClassIdentifier: Assembly-CSharp::PackagePickupLv2
   pickupSound: {fileID: 8300000, guid: fcbc48b73e262394e97332faf080f172, type: 3}
 --- !u!1001 &1211618243
 PrefabInstance:
@@ -41122,7 +41122,7 @@ GameObject:
   - component: {fileID: 1216408500}
   - component: {fileID: 1216408503}
   - component: {fileID: 1216408502}
-  - component: {fileID: 1216408501}
+  - component: {fileID: 1216408504}
   m_Layer: 0
   m_Name: Trotoar (22)
   m_TagString: Untagged
@@ -41145,21 +41145,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1873146040}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &1216408501
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1216408499}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eea0519bafa5834db90e4048852e37b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TrotoarTrigger
-  penaltyTime: 12
-  audioSource: {fileID: 1216408502}
-  sidewalkSound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!82 &1216408502
 AudioSource:
   m_ObjectHideFlags: 0
@@ -41278,6 +41263,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1216408504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216408499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58745fa616617824183f455de101f771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrotoarTriggerLv2
+  penaltyTime: 15
+  audioSource: {fileID: 76383890}
+  sidewalkSound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!1 &1218182803 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 2509cc5763ca17f4598bf61fd585a93e, type: 3}
@@ -42239,7 +42239,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8698539237512216479, guid: e22fad9e70ae94d42885f95bddd898ce, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1245337934}
+      addedObject: {fileID: 1245337935}
   m_SourcePrefab: {fileID: 100100000, guid: e22fad9e70ae94d42885f95bddd898ce, type: 3}
 --- !u!4 &1245337932 stripped
 Transform:
@@ -42251,7 +42251,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8698539237512216479, guid: e22fad9e70ae94d42885f95bddd898ce, type: 3}
   m_PrefabInstance: {fileID: 1245337931}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1245337934
+--- !u!114 &1245337935
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42260,9 +42260,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1245337933}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67919a9de0d683349a2901346ef2bef7, type: 3}
+  m_Script: {fileID: 11500000, guid: df49fc645362ab645848eb7cc6b00313, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PackagePickup
+  m_EditorClassIdentifier: Assembly-CSharp::PackagePickupLv2
   pickupSound: {fileID: 8300000, guid: fcbc48b73e262394e97332faf080f172, type: 3}
 --- !u!1001 &1247078294
 PrefabInstance:
@@ -42697,7 +42697,7 @@ GameObject:
   - component: {fileID: 1256306471}
   - component: {fileID: 1256306470}
   - component: {fileID: 1256306469}
-  - component: {fileID: 1256306468}
+  - component: {fileID: 1256306472}
   m_Layer: 0
   m_Name: Trotoar (6)
   m_TagString: Untagged
@@ -42705,21 +42705,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1256306468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1256306467}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eea0519bafa5834db90e4048852e37b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TrotoarTrigger
-  penaltyTime: 12
-  audioSource: {fileID: 1256306469}
-  sidewalkSound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!82 &1256306469
 AudioSource:
   m_ObjectHideFlags: 0
@@ -42853,6 +42838,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1873146040}
   m_LocalEulerAnglesHint: {x: 0, y: 209.413, z: 0}
+--- !u!114 &1256306472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1256306467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58745fa616617824183f455de101f771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrotoarTriggerLv2
+  penaltyTime: 15
+  audioSource: {fileID: 76383890}
+  sidewalkSound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!1001 &1256440184
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44008,7 +44008,7 @@ GameObject:
   - component: {fileID: 1283834119}
   - component: {fileID: 1283834118}
   - component: {fileID: 1283834117}
-  - component: {fileID: 1283834116}
+  - component: {fileID: 1283834120}
   m_Layer: 0
   m_Name: Trotoar (18)
   m_TagString: Untagged
@@ -44016,21 +44016,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1283834116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1283834115}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eea0519bafa5834db90e4048852e37b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TrotoarTrigger
-  penaltyTime: 12
-  audioSource: {fileID: 1283834117}
-  sidewalkSound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!82 &1283834117
 AudioSource:
   m_ObjectHideFlags: 0
@@ -44164,6 +44149,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1873146040}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1283834120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283834115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58745fa616617824183f455de101f771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrotoarTriggerLv2
+  penaltyTime: 15
+  audioSource: {fileID: 76383890}
+  sidewalkSound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!1 &1285896558 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: b74c48c2e73e17c418c9394124b75daf, type: 3}
@@ -45654,8 +45654,8 @@ GameObject:
   - component: {fileID: 1339978947}
   - component: {fileID: 1339978951}
   - component: {fileID: 1339978950}
-  - component: {fileID: 1339978949}
   - component: {fileID: 1339978948}
+  - component: {fileID: 1339978952}
   m_Layer: 0
   m_Name: AreaLampuMerah_Player (10)
   m_TagString: Untagged
@@ -45775,21 +45775,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1339978949
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1339978946}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69aa857ea6b5a0143a6ccc851c181824, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedLightTrigger
-  penaltyTime: 15
-  audioSource: {fileID: 1339978948}
-  penaltySound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!65 &1339978950
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45824,6 +45809,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrafficLightTrigger
   trafficLight: {fileID: 821566594}
+--- !u!114 &1339978952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1339978946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c25a64c558cef334c82b1f88aa7d205e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RedLightTriggerLv2
+  penaltyTime: 15
+  audioSource: {fileID: 174683061}
+  penaltySound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!1 &1341689987 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 6c862cab8ca035a448da05df5868553a, type: 3}
@@ -47125,8 +47125,8 @@ GameObject:
   - component: {fileID: 1382651690}
   - component: {fileID: 1382651693}
   - component: {fileID: 1382651692}
-  - component: {fileID: 1382651691}
   - component: {fileID: 1382651694}
+  - component: {fileID: 1382651695}
   m_Layer: 0
   m_Name: AreaLampuMerah_Player (5)
   m_TagString: Untagged
@@ -47149,21 +47149,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2015155294}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &1382651691
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1382651689}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69aa857ea6b5a0143a6ccc851c181824, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedLightTrigger
-  penaltyTime: 15
-  audioSource: {fileID: 1382651694}
-  penaltySound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!65 &1382651692
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47295,6 +47280,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1382651695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382651689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c25a64c558cef334c82b1f88aa7d205e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RedLightTriggerLv2
+  penaltyTime: 15
+  audioSource: {fileID: 174683061}
+  penaltySound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!1001 &1385339517
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50687,8 +50687,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1449517780}
   - component: {fileID: 1449517783}
-  - component: {fileID: 1449517782}
   - component: {fileID: 1449517781}
+  - component: {fileID: 1449517784}
   m_Layer: 0
   m_Name: GameObject (7)
   m_TagString: Untagged
@@ -50808,21 +50808,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1449517782
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1449517779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4246bb908a941744ca8b7551aa3ee2a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WrongWayTrigger
-  penaltyTime: 15
-  audioSource: {fileID: 1449517781}
-  wrongWaySound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!65 &1449517783
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50844,6 +50829,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1449517784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449517779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f9ea0a9f634e4a44878e7fd8103a13e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WrongWayTriggerLv2
+  penaltyTime: 15
+  audioSource: {fileID: 226533664}
+  wrongWaySound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!1 &1454885514 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 1b0084fb56aeb6e4e90f88a0def84cf0, type: 3}
@@ -52319,7 +52319,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8698539237512216479, guid: e22fad9e70ae94d42885f95bddd898ce, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1507228155}
+      addedObject: {fileID: 1507228156}
   m_SourcePrefab: {fileID: 100100000, guid: e22fad9e70ae94d42885f95bddd898ce, type: 3}
 --- !u!4 &1507228153 stripped
 Transform:
@@ -52331,7 +52331,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8698539237512216479, guid: e22fad9e70ae94d42885f95bddd898ce, type: 3}
   m_PrefabInstance: {fileID: 1507228152}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1507228155
+--- !u!114 &1507228156
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -52340,9 +52340,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1507228154}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67919a9de0d683349a2901346ef2bef7, type: 3}
+  m_Script: {fileID: 11500000, guid: df49fc645362ab645848eb7cc6b00313, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PackagePickup
+  m_EditorClassIdentifier: Assembly-CSharp::PackagePickupLv2
   pickupSound: {fileID: 8300000, guid: fcbc48b73e262394e97332faf080f172, type: 3}
 --- !u!1001 &1510989025
 PrefabInstance:
@@ -52614,8 +52614,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1528571146}
   - component: {fileID: 1528571145}
-  - component: {fileID: 1528571144}
   - component: {fileID: 1528571147}
+  - component: {fileID: 1528571148}
   m_Layer: 0
   m_Name: FinishLine
   m_TagString: Untagged
@@ -52623,22 +52623,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1528571144
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1528571143}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebab92757acfb5047a35088ed7e50d4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FinishTrigger
-  finishSceneName: FinishScene
-  sfxSource: {fileID: 1528571147}
-  successSound: {fileID: 8300000, guid: 3170415ecc7bd6646a53b30d28d3355d, type: 3}
-  failSound: {fileID: 8300000, guid: 4a19808d113b5b24db313934d7ff1d3c, type: 3}
 --- !u!65 &1528571145
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -52772,6 +52756,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1528571148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528571143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 694c4b5989be5004d840dbf5d08f6bd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FinishTriggerLv2
+  finishSceneName: FinishScene
+  sfxSource: {fileID: 1528571147}
+  successSound: {fileID: 8300000, guid: 3170415ecc7bd6646a53b30d28d3355d, type: 3}
+  failSound: {fileID: 8300000, guid: 4a19808d113b5b24db313934d7ff1d3c, type: 3}
 --- !u!1001 &1528740855
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54376,7 +54376,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8698539237512216479, guid: e22fad9e70ae94d42885f95bddd898ce, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1579122147}
+      addedObject: {fileID: 1579122148}
   m_SourcePrefab: {fileID: 100100000, guid: e22fad9e70ae94d42885f95bddd898ce, type: 3}
 --- !u!4 &1579122145 stripped
 Transform:
@@ -54388,7 +54388,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8698539237512216479, guid: e22fad9e70ae94d42885f95bddd898ce, type: 3}
   m_PrefabInstance: {fileID: 1579122144}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1579122147
+--- !u!114 &1579122148
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -54397,9 +54397,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1579122146}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67919a9de0d683349a2901346ef2bef7, type: 3}
+  m_Script: {fileID: 11500000, guid: df49fc645362ab645848eb7cc6b00313, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PackagePickup
+  m_EditorClassIdentifier: Assembly-CSharp::PackagePickupLv2
   pickupSound: {fileID: 8300000, guid: fcbc48b73e262394e97332faf080f172, type: 3}
 --- !u!1001 &1580510322
 PrefabInstance:
@@ -54665,8 +54665,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1584205066}
   - component: {fileID: 1584205068}
-  - component: {fileID: 1584205067}
   - component: {fileID: 1584205069}
+  - component: {fileID: 1584205070}
   m_Layer: 0
   m_Name: GameObject (2)
   m_TagString: Untagged
@@ -54689,21 +54689,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 890442263}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &1584205067
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1584205065}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4246bb908a941744ca8b7551aa3ee2a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WrongWayTrigger
-  penaltyTime: 15
-  audioSource: {fileID: 1584205069}
-  wrongWaySound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!65 &1584205068
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -54822,6 +54807,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1584205070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584205065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f9ea0a9f634e4a44878e7fd8103a13e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WrongWayTriggerLv2
+  penaltyTime: 15
+  audioSource: {fileID: 226533664}
+  wrongWaySound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!1001 &1585063588
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56186,7 +56186,7 @@ GameObject:
   - component: {fileID: 1620978130}
   - component: {fileID: 1620978129}
   - component: {fileID: 1620978128}
-  - component: {fileID: 1620978127}
+  - component: {fileID: 1620978131}
   m_Layer: 0
   m_Name: Trotoar (16)
   m_TagString: Untagged
@@ -56194,21 +56194,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1620978127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1620978126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eea0519bafa5834db90e4048852e37b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TrotoarTrigger
-  penaltyTime: 12
-  audioSource: {fileID: 1620978128}
-  sidewalkSound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!82 &1620978128
 AudioSource:
   m_ObjectHideFlags: 0
@@ -56342,6 +56327,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1873146040}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1620978131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620978126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58745fa616617824183f455de101f771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrotoarTriggerLv2
+  penaltyTime: 15
+  audioSource: {fileID: 76383890}
+  sidewalkSound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!1 &1622006185 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 2d5fb229ae2945742b900a405a5e7a0b, type: 3}
@@ -59567,7 +59567,7 @@ GameObject:
   - component: {fileID: 1691328152}
   - component: {fileID: 1691328151}
   - component: {fileID: 1691328150}
-  - component: {fileID: 1691328149}
+  - component: {fileID: 1691328153}
   m_Layer: 0
   m_Name: Trotoar (11)
   m_TagString: Untagged
@@ -59575,21 +59575,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1691328149
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1691328148}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eea0519bafa5834db90e4048852e37b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TrotoarTrigger
-  penaltyTime: 12
-  audioSource: {fileID: 1691328150}
-  sidewalkSound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!82 &1691328150
 AudioSource:
   m_ObjectHideFlags: 0
@@ -59723,6 +59708,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1873146040}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1691328153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1691328148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58745fa616617824183f455de101f771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrotoarTriggerLv2
+  penaltyTime: 15
+  audioSource: {fileID: 76383890}
+  sidewalkSound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!1001 &1692927188
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -61405,7 +61405,7 @@ GameObject:
   - component: {fileID: 1731121796}
   - component: {fileID: 1731121795}
   - component: {fileID: 1731121794}
-  - component: {fileID: 1731121793}
+  - component: {fileID: 1731121797}
   m_Layer: 0
   m_Name: Trotoar (7)
   m_TagString: Untagged
@@ -61413,21 +61413,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1731121793
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1731121792}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eea0519bafa5834db90e4048852e37b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TrotoarTrigger
-  penaltyTime: 12
-  audioSource: {fileID: 1731121794}
-  sidewalkSound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!82 &1731121794
 AudioSource:
   m_ObjectHideFlags: 0
@@ -61561,6 +61546,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1873146040}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1731121797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731121792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58745fa616617824183f455de101f771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrotoarTriggerLv2
+  penaltyTime: 15
+  audioSource: {fileID: 76383890}
+  sidewalkSound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!1 &1735776391
 GameObject:
   m_ObjectHideFlags: 0
@@ -62874,8 +62874,8 @@ GameObject:
   - component: {fileID: 1773669724}
   - component: {fileID: 1773669727}
   - component: {fileID: 1773669726}
-  - component: {fileID: 1773669725}
   - component: {fileID: 1773669728}
+  - component: {fileID: 1773669729}
   m_Layer: 0
   m_Name: AreaLampuMerah_Player (1)
   m_TagString: Untagged
@@ -62898,21 +62898,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2015155294}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &1773669725
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1773669723}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69aa857ea6b5a0143a6ccc851c181824, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedLightTrigger
-  penaltyTime: 15
-  audioSource: {fileID: 1773669728}
-  penaltySound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!65 &1773669726
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -63044,6 +63029,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1773669729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773669723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c25a64c558cef334c82b1f88aa7d205e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RedLightTriggerLv2
+  penaltyTime: 15
+  audioSource: {fileID: 174683061}
+  penaltySound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!1 &1781562996 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 2509cc5763ca17f4598bf61fd585a93e, type: 3}
@@ -63988,8 +63988,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1800829203}
   - component: {fileID: 1800829205}
-  - component: {fileID: 1800829204}
   - component: {fileID: 1800829206}
+  - component: {fileID: 1800829207}
   m_Layer: 0
   m_Name: GameObject (4)
   m_TagString: Untagged
@@ -64012,21 +64012,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 890442263}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &1800829204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1800829202}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4246bb908a941744ca8b7551aa3ee2a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WrongWayTrigger
-  penaltyTime: 15
-  audioSource: {fileID: 1800829206}
-  wrongWaySound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!65 &1800829205
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -64145,6 +64130,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1800829207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800829202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f9ea0a9f634e4a44878e7fd8103a13e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WrongWayTriggerLv2
+  penaltyTime: 15
+  audioSource: {fileID: 226533664}
+  wrongWaySound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!1 &1804970357 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 6c862cab8ca035a448da05df5868553a, type: 3}
@@ -65229,7 +65229,7 @@ GameObject:
   - component: {fileID: 1821248544}
   - component: {fileID: 1821248547}
   - component: {fileID: 1821248546}
-  - component: {fileID: 1821248545}
+  - component: {fileID: 1821248548}
   m_Layer: 0
   m_Name: Trotoar (19)
   m_TagString: Untagged
@@ -65252,21 +65252,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1873146040}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &1821248545
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1821248543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eea0519bafa5834db90e4048852e37b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TrotoarTrigger
-  penaltyTime: 12
-  audioSource: {fileID: 1821248546}
-  sidewalkSound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!82 &1821248546
 AudioSource:
   m_ObjectHideFlags: 0
@@ -65385,6 +65370,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1821248548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821248543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58745fa616617824183f455de101f771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrotoarTriggerLv2
+  penaltyTime: 15
+  audioSource: {fileID: 76383890}
+  sidewalkSound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!1 &1821537459 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 4f32dfddb033d3e40b5841bc53cc1689, type: 3}
@@ -68217,8 +68217,8 @@ GameObject:
   - component: {fileID: 1909186085}
   - component: {fileID: 1909186088}
   - component: {fileID: 1909186087}
-  - component: {fileID: 1909186086}
   - component: {fileID: 1909186089}
+  - component: {fileID: 1909186090}
   m_Layer: 0
   m_Name: AreaLampuMerah_Player (6)
   m_TagString: Untagged
@@ -68241,21 +68241,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2015155294}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &1909186086
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1909186084}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69aa857ea6b5a0143a6ccc851c181824, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedLightTrigger
-  penaltyTime: 15
-  audioSource: {fileID: 1909186089}
-  penaltySound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!65 &1909186087
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -68387,6 +68372,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1909186090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909186084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c25a64c558cef334c82b1f88aa7d205e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RedLightTriggerLv2
+  penaltyTime: 15
+  audioSource: {fileID: 174683061}
+  penaltySound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!1001 &1910301100
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -69421,8 +69421,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1933784945}
   - component: {fileID: 1933784947}
-  - component: {fileID: 1933784946}
   - component: {fileID: 1933784948}
+  - component: {fileID: 1933784949}
   m_Layer: 0
   m_Name: GameObject (6)
   m_TagString: Untagged
@@ -69445,21 +69445,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 890442263}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1933784946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1933784944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4246bb908a941744ca8b7551aa3ee2a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WrongWayTrigger
-  penaltyTime: 15
-  audioSource: {fileID: 1933784948}
-  wrongWaySound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!65 &1933784947
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -69578,6 +69563,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1933784949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1933784944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f9ea0a9f634e4a44878e7fd8103a13e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WrongWayTriggerLv2
+  penaltyTime: 15
+  audioSource: {fileID: 226533664}
+  wrongWaySound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!1001 &1938481052
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -69743,7 +69743,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8698539237512216479, guid: e22fad9e70ae94d42885f95bddd898ce, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1940797328}
+      addedObject: {fileID: 1940797329}
   m_SourcePrefab: {fileID: 100100000, guid: e22fad9e70ae94d42885f95bddd898ce, type: 3}
 --- !u!4 &1940797326 stripped
 Transform:
@@ -69755,7 +69755,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8698539237512216479, guid: e22fad9e70ae94d42885f95bddd898ce, type: 3}
   m_PrefabInstance: {fileID: 1940797325}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1940797328
+--- !u!114 &1940797329
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -69764,9 +69764,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1940797327}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67919a9de0d683349a2901346ef2bef7, type: 3}
+  m_Script: {fileID: 11500000, guid: df49fc645362ab645848eb7cc6b00313, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PackagePickup
+  m_EditorClassIdentifier: Assembly-CSharp::PackagePickupLv2
   pickupSound: {fileID: 8300000, guid: fcbc48b73e262394e97332faf080f172, type: 3}
 --- !u!1001 &1941126634
 PrefabInstance:
@@ -70162,7 +70162,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8698539237512216479, guid: e22fad9e70ae94d42885f95bddd898ce, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 852971718}
+      addedObject: {fileID: 852971723}
   m_SourcePrefab: {fileID: 100100000, guid: e22fad9e70ae94d42885f95bddd898ce, type: 3}
 --- !u!1001 &1955908340
 PrefabInstance:
@@ -70668,7 +70668,7 @@ GameObject:
   - component: {fileID: 1963854246}
   - component: {fileID: 1963854245}
   - component: {fileID: 1963854244}
-  - component: {fileID: 1963854243}
+  - component: {fileID: 1963854247}
   m_Layer: 0
   m_Name: Trotoar (8)
   m_TagString: Untagged
@@ -70676,21 +70676,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1963854243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1963854242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eea0519bafa5834db90e4048852e37b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TrotoarTrigger
-  penaltyTime: 12
-  audioSource: {fileID: 1963854244}
-  sidewalkSound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!82 &1963854244
 AudioSource:
   m_ObjectHideFlags: 0
@@ -70824,6 +70809,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1873146040}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1963854247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963854242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58745fa616617824183f455de101f771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrotoarTriggerLv2
+  penaltyTime: 15
+  audioSource: {fileID: 76383890}
+  sidewalkSound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!1001 &1964084094
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -71742,9 +71742,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1987553247}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67919a9de0d683349a2901346ef2bef7, type: 3}
+  m_Script: {fileID: 11500000, guid: df49fc645362ab645848eb7cc6b00313, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PackagePickup
+  m_EditorClassIdentifier: Assembly-CSharp::PackagePickupLv2
   pickupSound: {fileID: 8300000, guid: fcbc48b73e262394e97332faf080f172, type: 3}
 --- !u!1 &1987620254 stripped
 GameObject:
@@ -76754,7 +76754,7 @@ GameObject:
   - component: {fileID: 2083423759}
   - component: {fileID: 2083423758}
   - component: {fileID: 2083423757}
-  - component: {fileID: 2083423756}
+  - component: {fileID: 2083423760}
   m_Layer: 0
   m_Name: Trotoar (1)
   m_TagString: Untagged
@@ -76762,21 +76762,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2083423756
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2083423755}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eea0519bafa5834db90e4048852e37b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TrotoarTrigger
-  penaltyTime: 12
-  audioSource: {fileID: 2083423757}
-  sidewalkSound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!82 &2083423757
 AudioSource:
   m_ObjectHideFlags: 0
@@ -76910,6 +76895,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1873146040}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2083423760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083423755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58745fa616617824183f455de101f771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrotoarTriggerLv2
+  penaltyTime: 15
+  audioSource: {fileID: 76383890}
+  sidewalkSound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!1001 &2085483004
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -77000,7 +77000,7 @@ GameObject:
   - component: {fileID: 2086149292}
   - component: {fileID: 2086149291}
   - component: {fileID: 2086149290}
-  - component: {fileID: 2086149289}
+  - component: {fileID: 2086149293}
   m_Layer: 0
   m_Name: Trotoar (3)
   m_TagString: Untagged
@@ -77008,21 +77008,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2086149289
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2086149288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eea0519bafa5834db90e4048852e37b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TrotoarTrigger
-  penaltyTime: 12
-  audioSource: {fileID: 2086149290}
-  sidewalkSound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!82 &2086149290
 AudioSource:
   m_ObjectHideFlags: 0
@@ -77156,6 +77141,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1873146040}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &2086149293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086149288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58745fa616617824183f455de101f771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrotoarTriggerLv2
+  penaltyTime: 15
+  audioSource: {fileID: 76383890}
+  sidewalkSound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!1 &2086436259
 GameObject:
   m_ObjectHideFlags: 0
@@ -77167,7 +77167,7 @@ GameObject:
   - component: {fileID: 2086436263}
   - component: {fileID: 2086436262}
   - component: {fileID: 2086436261}
-  - component: {fileID: 2086436260}
+  - component: {fileID: 2086436264}
   m_Layer: 0
   m_Name: Trotoar (17)
   m_TagString: Untagged
@@ -77175,21 +77175,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2086436260
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2086436259}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eea0519bafa5834db90e4048852e37b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TrotoarTrigger
-  penaltyTime: 12
-  audioSource: {fileID: 2086436261}
-  sidewalkSound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!82 &2086436261
 AudioSource:
   m_ObjectHideFlags: 0
@@ -77323,6 +77308,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1873146040}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &2086436264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086436259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58745fa616617824183f455de101f771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrotoarTriggerLv2
+  penaltyTime: 15
+  audioSource: {fileID: 76383890}
+  sidewalkSound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!1001 &2088078140
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -77677,7 +77677,7 @@ GameObject:
   - component: {fileID: 2097605755}
   - component: {fileID: 2097605758}
   - component: {fileID: 2097605757}
-  - component: {fileID: 2097605756}
+  - component: {fileID: 2097605759}
   m_Layer: 0
   m_Name: Trotoar (20)
   m_TagString: Untagged
@@ -77700,21 +77700,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1873146040}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &2097605756
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2097605754}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eea0519bafa5834db90e4048852e37b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TrotoarTrigger
-  penaltyTime: 12
-  audioSource: {fileID: 2097605757}
-  sidewalkSound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!82 &2097605757
 AudioSource:
   m_ObjectHideFlags: 0
@@ -77833,6 +77818,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2097605759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097605754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58745fa616617824183f455de101f771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrotoarTriggerLv2
+  penaltyTime: 15
+  audioSource: {fileID: 76383890}
+  sidewalkSound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!1001 &2100492090
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -78900,8 +78900,8 @@ GameObject:
   - component: {fileID: 2128027843}
   - component: {fileID: 2128027846}
   - component: {fileID: 2128027845}
-  - component: {fileID: 2128027844}
   - component: {fileID: 2128027847}
+  - component: {fileID: 2128027848}
   m_Layer: 0
   m_Name: AreaLampuMerah_Player (7)
   m_TagString: Untagged
@@ -78924,21 +78924,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2015155294}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2128027844
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2128027842}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69aa857ea6b5a0143a6ccc851c181824, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedLightTrigger
-  penaltyTime: 15
-  audioSource: {fileID: 2128027847}
-  penaltySound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!65 &2128027845
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -79070,6 +79055,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2128027848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128027842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c25a64c558cef334c82b1f88aa7d205e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RedLightTriggerLv2
+  penaltyTime: 15
+  audioSource: {fileID: 174683061}
+  penaltySound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!1 &2129392556 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: dac1a631b172e66469fb09e9987bcf57, type: 3}
@@ -79254,8 +79254,8 @@ GameObject:
   - component: {fileID: 2133105556}
   - component: {fileID: 2133105559}
   - component: {fileID: 2133105558}
-  - component: {fileID: 2133105557}
   - component: {fileID: 2133105560}
+  - component: {fileID: 2133105561}
   m_Layer: 0
   m_Name: AreaLampuMerah_Player (8)
   m_TagString: Untagged
@@ -79278,21 +79278,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2015155294}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2133105557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2133105555}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69aa857ea6b5a0143a6ccc851c181824, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedLightTrigger
-  penaltyTime: 15
-  audioSource: {fileID: 2133105560}
-  penaltySound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!65 &2133105558
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -79424,6 +79409,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2133105561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2133105555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c25a64c558cef334c82b1f88aa7d205e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RedLightTriggerLv2
+  penaltyTime: 15
+  audioSource: {fileID: 174683061}
+  penaltySound: {fileID: 8300000, guid: 657c4598c2d72aa419deab4c16433077, type: 3}
 --- !u!1 &2138134153
 GameObject:
   m_ObjectHideFlags: 0

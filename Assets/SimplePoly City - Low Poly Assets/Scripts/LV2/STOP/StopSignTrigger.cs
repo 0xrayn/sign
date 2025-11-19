@@ -7,7 +7,7 @@ public class StopSignTrigger : MonoBehaviour
     public float penaltyTime = 6f;        // hukuman
     public float stopSpeedThreshold = 0.2f; // batas dianggap berhenti
 
-    private Controller playerController;
+    private ControllerLv2 playerController;
     private float stopTimer = 0f;
     private bool playerInside = false;
     private bool penaltyGiven = false;
@@ -24,7 +24,7 @@ public class StopSignTrigger : MonoBehaviour
             penaltyGiven = false;
             stopTimer = 0f;
 
-            playerController = other.GetComponent<Controller>();
+            playerController = other.GetComponent<ControllerLv2>();
         }
     }
 
@@ -36,7 +36,7 @@ public class StopSignTrigger : MonoBehaviour
 
             if (!penaltyGiven && stopTimer < requiredStopTime)
             {
-                HUDManager.Instance.AddPenalty(penaltyTime, "Tidak berhenti 3 detik di rambu STOP!");
+                HudManagerLv2.Instance.AddPenalty(penaltyTime, "Tidak berhenti 3 detik di rambu STOP!");
                 if (audioSource != null && sidewalkSound != null)
                     audioSource.PlayOneShot(sidewalkSound);
             }
