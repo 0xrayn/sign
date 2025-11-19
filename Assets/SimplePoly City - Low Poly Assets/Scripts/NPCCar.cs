@@ -37,7 +37,8 @@ public class NPCCar : MonoBehaviour
             return;
 
         Transform target = waypointManager.waypoints[currentIndex];
-        Vector3 dir = (target.position - transform.position).normalized;
+        Vector3 toTarget = (target.position - transform.position);
+        Vector3 dir = toTarget.normalized;
 
         float desiredSpeed = maxSpeed;
         stopForPlayer = false;

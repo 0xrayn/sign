@@ -16,10 +16,13 @@ public class TrafficLightController : MonoBehaviour
     public Material LightsOnMat;
     public Material LightsOffMat;
 
-    [Header("Audio Clips")]
+    [Header("Audio Clips (opsional)")]
     public AudioClip redSound;
     public AudioClip yellowSound;
     public AudioClip greenSound;
+
+    [Header("Options")]
+    public bool enableSounds = true;
 
     private AudioSource redAudio;
     private AudioSource yellowAudio;
@@ -30,60 +33,62 @@ public class TrafficLightController : MonoBehaviour
 
     private void Awake()
     {
-        redAudio = gameObject.AddComponent<AudioSource>();
-        yellowAudio = gameObject.AddComponent<AudioSource>();
-        greenAudio = gameObject.AddComponent<AudioSource>();
-
+        EnsureAudio(); // pastikan ada
+        // volume & setting standar
         redAudio.playOnAwake = false;
         yellowAudio.playOnAwake = false;
         greenAudio.playOnAwake = false;
-
         redAudio.volume = 0.05f;
         yellowAudio.volume = 0.05f;
         greenAudio.volume = 0.05f;
+    }
 
+    private void EnsureAudio()
+    {
+        if (redAudio == null)   redAudio   = gameObject.AddComponent<AudioSource>();
+        if (yellowAudio == null) yellowAudio = gameObject.AddComponent<AudioSource>();
+        if (greenAudio == null)  greenAudio  = gameObject.AddComponent<AudioSource>();
     }
 
     public void SetLight(bool red, bool yellow, bool green)
     {
-        LightState prev = currentState;
+        var prev = currentState;
 
         if (red) currentState = LightState.Red;
         else if (yellow) currentState = LightState.Yellow;
         else if (green) currentState = LightState.Green;
 
-        // Set material
-        if (redRenderer)
-            redRenderer.material = red ? LightsOnMat : LightsOffMat;
-        if (yellowRenderer)
-            yellowRenderer.material = yellow ? LightsOnMat : LightsOffMat;
-        if (greenRenderer)
-            greenRenderer.material = green ? LightsOnMat : LightsOffMat;
+        // Set material (cek null biar aman)
+        if (redRenderer)    redRenderer.material    = red    ? LightsOnMat : LightsOffMat;
+        if (yellowRenderer) yellowRenderer.material = yellow ? LightsOnMat : LightsOffMat;
+        if (greenRenderer)  greenRenderer.material  = green  ? LightsOnMat : LightsOffMat;
 
-        // Set halo
-        if (redHalo) redHalo.SetActive(red);
+        // Halo
+        if (redHalo)    redHalo.SetActive(red);
         if (yellowHalo) yellowHalo.SetActive(yellow);
-        if (greenHalo) greenHalo.SetActive(green);
+        if (greenHalo)  greenHalo.SetActive(green);
 
-        // Mainkan suara hanya jika state berubah
+        // Mainkan suara hanya kalau state berubah
         if (prev != currentState)
             PlaySound(currentState);
     }
 
     private void PlaySound(LightState state)
     {
+        if (!enableSounds) return;
+
+        EnsureAudio(); // jaga-jaga kalau Awake belum sempat terpanggil
+
         switch (state)
         {
             case LightState.Red:
-                if (redSound) redAudio.PlayOneShot(redSound);
+                if (redAudio != null && redSound != null) redAudio.PlayOneShot(redSound);
                 break;
-
             case LightState.Yellow:
-                if (yellowSound) yellowAudio.PlayOneShot(yellowSound);
+                if (yellowAudio != null && yellowSound != null) yellowAudio.PlayOneShot(yellowSound);
                 break;
-
             case LightState.Green:
-                if (greenSound) greenAudio.PlayOneShot(greenSound);
+                if (greenAudio != null && greenSound != null) greenAudio.PlayOneShot(greenSound);
                 break;
         }
     }
