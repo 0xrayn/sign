@@ -7,7 +7,7 @@ public class StopSignTriggerLv4 : MonoBehaviour
     public float penaltyTime = 6f;        // hukuman
     public float stopSpeedThreshold = 0.2f; // batas dianggap berhenti
 
-    private Controller playerController;
+    private ControllerLv4 playerController;
     private float stopTimer = 0f;
     private bool playerInside = false;
     private bool penaltyGiven = false;
@@ -24,7 +24,7 @@ public class StopSignTriggerLv4 : MonoBehaviour
             penaltyGiven = false;
             stopTimer = 0f;
 
-            playerController = other.GetComponent<Controller>();
+            playerController = other.GetComponent<ControllerLv4>();
         }
     }
 

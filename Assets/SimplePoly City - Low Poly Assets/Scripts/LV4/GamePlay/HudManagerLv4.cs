@@ -23,7 +23,7 @@ public class HudManagerLv4 : MonoBehaviour
     [HideInInspector] public bool allPackagesCollected = false;
 
     private bool finished = false;
-    private Controller playerController;
+    private ControllerLv4 playerController;
 
     [Header("Sound Settings")]
     public AudioSource bgmSource;
@@ -35,7 +35,7 @@ public class HudManagerLv4 : MonoBehaviour
 
     void Start()
     {
-        playerController = Controller.Instance;
+        playerController = ControllerLv4.Instance;
 
         // Play BGM fade-in
         if (bgmSource != null && backgroundMusic != null)
@@ -142,7 +142,7 @@ public class HudManagerLv4 : MonoBehaviour
     IEnumerator LoadFinishSceneAfter(float delay)
     {
         yield return new WaitForSeconds(delay);
-        UnityEngine.SceneManagement.SceneManager.LoadScene("FinishScene");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("FinishSceneLv4");
     }
 
     // ================================

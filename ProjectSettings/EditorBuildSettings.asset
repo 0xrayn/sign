@@ -53,6 +53,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/SimplePoly City - Low Poly Assets/Demo/LV4/Level 4.unity
     guid: 4fe90800cdeed5943abc100ae4b6cb94
+  - enabled: 1
+    path: Assets/SimplePoly City - Low Poly Assets/Demo/LV4/GameOverSceneLv4.unity
+    guid: 2cab16d5f43cbd74c8f3842f1defe6ec
+  - enabled: 1
+    path: Assets/SimplePoly City - Low Poly Assets/Demo/LV4/FinishSceneLv4.unity
+    guid: a90e586506628b7479e985e0aa1257e9
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
