@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8760968866677804807}
   - component: {fileID: 6721019503388330531}
   - component: {fileID: 1953463813735464475}
+  - component: {fileID: 3996109828285639090}
   m_Layer: 0
   m_Name: Box
   m_TagString: Untagged
@@ -26,13 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8698539237512216479}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8760968866677804807
 MeshFilter:
@@ -59,6 +60,11 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -80,6 +86,7 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -105,3 +112,23 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.86127067, y: 0.6047598, z: 0.6867007}
   m_Center: {x: -0.43063533, y: 0.3023799, z: -0.34335035}
+--- !u!114 &3996109828285639090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698539237512216479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2b3f0091be4b9541a06c291831f1896, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PackageIdleAnimator
+  rotateAxis: {x: 0, y: 1, z: 0}
+  rotateSpeed: 90
+  bobAmplitude: 0.15
+  bobFrequency: 1.2
+  swayAmplitude: {x: 0.05, y: 0.03}
+  swayFrequency: {x: 0.7, y: 0.9}
+  useLocal: 1
+  randomizePhase: 1

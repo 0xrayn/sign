@@ -52,7 +52,7 @@ public class FinishSceneManagerLv4 : MonoBehaviour
     {
         // --- STORY tampil ---
         storyText.text =
-        "Anda berhasil mengantarkan paket penting ke rumah tukang kayu di tengah keramaian kota.\n" +
+        "Anda berhasil mengantarkan paket penting ke rumah tukang kayu di tengah keramaian kota.\n\n" +
         "Setiap tikungan sempit dan penyeberang jalan Anda lewati dengan sabar dan penuh kehati-hatian.\n\n" +
         "Terima kasih atas kewaspadaan Anda — keselamatan warga dan paket tukang kayu kini terjaga.";
 

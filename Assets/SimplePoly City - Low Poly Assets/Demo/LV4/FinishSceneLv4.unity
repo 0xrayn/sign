@@ -501,7 +501,10 @@ MonoBehaviour:
   resultPanel: {fileID: 117204302}
   titleText: {fileID: 722379652}
   timeText: {fileID: 917748733}
-  stars: []
+  stars:
+  - {fileID: 1432523258}
+  - {fileID: 2116393381}
+  - {fileID: 692731245}
   starOn: {fileID: 21300000, guid: f0654dcfb6d2133449d0d5b7e12d8340, type: 3}
   starOff: {fileID: 21300000, guid: 4450cc792ab45104d829eba3427ba71c, type: 3}
   fadeOverlay: {fileID: 2097897474}
